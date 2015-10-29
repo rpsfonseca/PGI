@@ -35,7 +35,7 @@ public class menuScript : MonoBehaviour {
 	}
 
 	public void StartLevel() {
-		//System.Console.WriteLine ("Started game");
+		print ("Starteed game");
 
 	}
 }
