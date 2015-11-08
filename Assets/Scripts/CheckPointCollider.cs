@@ -3,12 +3,16 @@ using System.Collections;
 
 public class CheckPointCollider : MonoBehaviour {
 
-	public Collider2D firstCheck;
-	public Collider2D secondCheck;
+	private bool firstPassed = false, secondPassed = false;
 
-
-	void OnTriggerEnter() {
-		Debug.Log ("Entrou");
+	void OnTriggerEnter2D(Collider2D col) {
+		if (col.name.Equals ("FirstCheck") && firstPassed == false) {
+			Debug.Log ("Passed first cp");
+			firstPassed = true;
+		} else if (col.name.Equals ("SecondCheck") && secondPassed == false) {
+			Debug.Log ("Passed second cp");
+			secondPassed = true;
+		}
 	}
 
 	
