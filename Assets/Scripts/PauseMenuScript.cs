@@ -39,6 +39,11 @@ public class PauseMenuScript : MonoBehaviour {
 		Time.timeScale = 1;
 
 	}
+
+	public void RestartPressed() {
+		Application.LoadLevel (Application.loadedLevel);
+		Time.timeScale = 1;
+	}
 	
 
 	public void OptionPressed() {

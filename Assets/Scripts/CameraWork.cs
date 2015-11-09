@@ -21,13 +21,13 @@ public class CameraWork : MonoBehaviour {
 
 	void stopCameraAtEdge(){
 		if (character.transform.position.x <= -4.02f) {
-			GetComponent<Camera> ().transform.position = new Vector3 (-4.02f, 2.61f, -1);
+			GetComponent<Camera> ().transform.position = new Vector3 (-4.02f, 2.61f, -11);
 		} 
 		else if(character.transform.position.x >= 22.18) {
-			GetComponent<Camera> ().transform.position = new Vector3 (22.18f, 2.61f, -1);
+			GetComponent<Camera> ().transform.position = new Vector3 (22.18f, 2.61f, -11);
 		}
 		else {
-			GetComponent<Camera>().transform.position = new Vector3 (character.transform.position.x, 2.61f, -1);
+			GetComponent<Camera>().transform.position = new Vector3 (character.transform.position.x, 2.61f, -11);
 		}
 	}
 }

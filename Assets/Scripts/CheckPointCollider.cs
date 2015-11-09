@@ -6,6 +6,8 @@ public class CheckPointCollider : MonoBehaviour {
 
 	public Text counter;
 	public Text status;
+	public GameObject finishWall;
+	public Slider vel_slider;
 
 	private bool firstPassed = false, secondPassed = false;
 	float timePassed = 0;
@@ -13,10 +15,12 @@ public class CheckPointCollider : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.name.Equals ("FirstCheck") && firstPassed == false) {
 			Debug.Log ("Passed first cp");
+			vel_slider.interactable = false;
 			firstPassed = true;
 		} else if (col.name.Equals ("SecondCheck") && secondPassed == false) {
 			Debug.Log ("Passed second cp: passed in:  " + timePassed);
 			statusText();
+			vel_slider.interactable = true;
 			secondPassed = true;
 		}
 	}
@@ -29,6 +33,13 @@ public class CheckPointCollider : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		countTime ();
+	}
+
+	void OnCollisionEnter2D(Collision2D col){
+		if (col.gameObject.Equals(finishWall)) {
+			if(status.text == "Sucess")
+				Application.LoadLevel(0);
+		}
 	}
 
 	void countTime() {
