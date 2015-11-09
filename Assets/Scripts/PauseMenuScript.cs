@@ -17,7 +17,7 @@ public class PauseMenuScript : MonoBehaviour {
 	}
 
 	void CheckIfEscPressed(){
-		if (Input.GetKeyDown (KeyCode.Escape)) {
+		if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown (KeyCode.P)) {
 			if(isPaused == false){
 				PauseGame();
 			}
