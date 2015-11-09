@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CharacterMov : MonoBehaviour {
 
@@ -7,11 +8,14 @@ public class CharacterMov : MonoBehaviour {
 	bool facingRight = true;
 
 
+
 	bool grounded  = false;
 	public Transform groundCheck;
 	float groundRadious = 0.2f;
 	public LayerMask whatIsGround;
 	public float jumpForce = 0;
+
+	public Slider vel_Slider;
 	 
 
 	void Start () {
@@ -38,6 +42,7 @@ public class CharacterMov : MonoBehaviour {
 
 	void Update() {
 		Jump ();
+		maxSpeed = vel_Slider.value;
 	}
 
 	void Flip(){
