@@ -14,12 +14,9 @@ public class CharacterMov : MonoBehaviour {
 	float groundRadious = 0.2f;
 	public LayerMask whatIsGround;
 	public float jumpForce = 0;
-
-	public Slider vel_Slider;
-	 
-
-	void Start () {
 	
+	void Start () {
+		Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame
@@ -27,7 +24,6 @@ public class CharacterMov : MonoBehaviour {
 
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
 		 
-
 		float move = Input.GetAxis ("Horizontal");
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 
@@ -40,7 +36,6 @@ public class CharacterMov : MonoBehaviour {
 
 	void Update() {
 		Jump ();
-		maxSpeed = vel_Slider.value;
 	}
 
 	void Flip(){

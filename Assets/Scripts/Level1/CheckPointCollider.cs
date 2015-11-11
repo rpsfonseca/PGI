@@ -38,7 +38,7 @@ public class CheckPointCollider : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.Equals(finishWall)) {
 			if(status.text == "Sucess")
-				Application.LoadLevel(0);
+				Application.LoadLevel(2);
 		}
 	}
 

@@ -8,6 +8,7 @@ public class SliderControl : MonoBehaviour {
 	public Text velocityLabel;
 	public GameObject firstCheck;
 	public GameObject secondCheck;
+	public GameObject character;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,8 @@ public class SliderControl : MonoBehaviour {
 	void checkSliderValue() {
 		velocityLabel.text = "Velocity: " + GetComponent<Slider> ().value + " m/s";
 		timeLabel.text = "Time: " + (firstCheck.transform.position.x - secondCheck.transform.position.x) / GetComponent<Slider> ().value * (-1) + " s";
+		character.GetComponent<CharacterMov> ().maxSpeed = GetComponent<Slider> ().value;
+
 
 		
 	}
