@@ -16,6 +16,6 @@ public class BaseCamera : MonoBehaviour {
 	}
 
 	void CameraXFollow() {
-		GetComponent<Camera>().transform.position = new Vector3 (character.transform.position.x, 2.61f, -11);
+		GetComponent<Camera>().transform.position = new Vector3 (character.transform.position.x, GetComponent<Camera>().transform.position.y, -11);
 	}
 }
