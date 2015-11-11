@@ -97,7 +97,6 @@ GameObject:
   - 50: {fileID: 5027866}
   - 61: {fileID: 6125420}
   - 114: {fileID: 11424630}
-  - 114: {fileID: 11440120}
   m_Layer: 9
   m_Name: Character
   m_TagString: Untagged
@@ -330,22 +329,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294966783
   jumpForce: 200
-  vel_Slider: {fileID: 0}
---- !u!114 &11440120
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f926f86c64964229a1477b1f1f9020a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  counter: {fileID: 0}
-  status: {fileID: 0}
-  finishWall: {fileID: 0}
-  vel_slider: {fileID: 0}
 --- !u!114 &11445866
 MonoBehaviour:
   m_ObjectHideFlags: 1
