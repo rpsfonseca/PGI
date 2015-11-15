@@ -8,7 +8,7 @@ public class menuScript : MonoBehaviour {
 	public Button startText;
 	public Button exitText;
 	public Canvas levelMenu;
-
+	public ScreenFader fader;
 
 
 	void Start () {
@@ -44,8 +44,12 @@ public class menuScript : MonoBehaviour {
 	}
 
 	public void LevelsPressed() {
+
+		//yield return StartCoroutine (fader.FadeToBlack ()); 
 		GetComponent<Canvas> ().gameObject.SetActive (false);
 		levelMenu.gameObject.SetActive (true);
+
+		//yield return StartCoroutine (fader.FadeToClear ());
 
 	}
 }
