@@ -2,17 +2,19 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class HintController : MonoBehaviour {
+public class HintMessage1 : MonoBehaviour {
 
 	public Text hintText;
 	bool movedLeft = false, movedRight = false;
 	float deadZone = 0.02f; //Margin for sensitive analog inputs
 	float inputHorizontal;
 	public GameObject arrow;
+	bool valid = false;
 		
 	void Start() {
 		arrow.GetComponentInChildren<Renderer> ().enabled = false;
 	}
+	
 
 	
 	// Update is called once per frame
@@ -41,7 +43,12 @@ public class HintController : MonoBehaviour {
 		} else if (movedLeft == true && movedRight == true) {
 			hintText.text = "Good! Now you got it! Pass the sign with the \narrow  to go to the next level!";
 			arrow.GetComponentInChildren<Renderer>().enabled = true;
+			valid = true;
 		}
 		                                                  
+	}
+
+	public bool getValid(){
+		return(valid);
 	}
 }

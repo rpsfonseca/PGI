@@ -2,12 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class HintMessage : MonoBehaviour {
+public class HintMessage2 : MonoBehaviour {
 
 	public Text hintMessage;
 	public GameObject arrow;
 	public GameObject character;
-
 
 	bool jumped = false;
 
@@ -20,6 +19,10 @@ public class HintMessage : MonoBehaviour {
 	void Update () {
 		checkIfJumped ();
 		changeHint ();
+	}
+
+	public bool getJumped(){
+		return jumped;
 	}
 
 	void checkIfJumped() {
