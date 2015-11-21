@@ -9,7 +9,7 @@ public class CharacterMov : MonoBehaviour {
 
 
 
-	bool grounded  = false;
+	public bool grounded  = false;
 	public Transform groundCheck;
 	float groundRadious = 0.2f;
 	public LayerMask whatIsGround;
