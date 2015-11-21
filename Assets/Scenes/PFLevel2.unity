@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 1622707712}
-  levelToLoad: 0
+  levelToLoad: 3
 --- !u!114 &917984939 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11450970, guid: 7a964e852361149e5bd6afd5afb14c3d,
