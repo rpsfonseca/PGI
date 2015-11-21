@@ -26,6 +26,10 @@ public class CharacterMov : MonoBehaviour {
 		 
 		float move = Input.GetAxis ("Horizontal");
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+		if (GetComponent<Rigidbody2D> ().velocity.y < -7) {
+			Application.LoadLevel (3);
+		}
+		Debug.Log (GetComponent<Rigidbody2D> ().velocity.y);
 
 		 
 		/*if (move > 0 && !facingRight)
