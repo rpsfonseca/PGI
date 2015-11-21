@@ -26,11 +26,6 @@ public class CharacterMov : MonoBehaviour {
 		 
 		float move = Input.GetAxis ("Horizontal");
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-		if (GetComponent<Rigidbody2D> ().velocity.y < -7) {
-			Application.LoadLevel (3);
-		}
-		Debug.Log (GetComponent<Rigidbody2D> ().velocity.y);
-
 		 
 		/*if (move > 0 && !facingRight)
 			Flip ();
@@ -39,6 +34,7 @@ public class CharacterMov : MonoBehaviour {
 	}
 
 	void Update() {
+		verticalDeath ();
 		Jump ();
 	}
 
@@ -53,6 +49,13 @@ public class CharacterMov : MonoBehaviour {
 		if (grounded == true && Input.GetKeyDown(KeyCode.Space))
 			GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, jumpForce));
 
+	}
+
+
+	void verticalDeath() {
+		if (grounded == true && GetComponent<Rigidbody2D> ().velocity.y < -7.5) {
+			Application.LoadLevel(Application.loadedLevel);
+		}
 	}
 
 
