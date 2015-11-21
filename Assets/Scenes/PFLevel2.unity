@@ -372,7 +372,6 @@ MonoBehaviour:
   hintMessage: {fileID: 917984939}
   arrow: {fileID: 66633054}
   character: {fileID: 1854228376}
-  jumped: 0
 --- !u!4 &1622707714
 Transform:
   m_ObjectHideFlags: 0
