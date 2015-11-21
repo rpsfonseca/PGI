@@ -40,16 +40,18 @@ public class menuScript : MonoBehaviour {
 	public void StartLevel() {
 		print ("Started game");
 		Application.LoadLevel (1);
-
+		  
 	}
 
-	public void LevelsPressed() {
+	public IEnumerator LevelsPressed() {
 
-		//yield return StartCoroutine (fader.FadeToBlack ()); 
+		fader.gameObject.SetActive (true);
+		yield return StartCoroutine (fader.FadeToBlack ()); 
 		GetComponent<Canvas> ().gameObject.SetActive (false);
 		levelMenu.gameObject.SetActive (true);
 
-		//yield return StartCoroutine (fader.FadeToClear ());
+		yield return StartCoroutine (fader.FadeToClear ());
+		fader.gameObject.SetActive (false);
 
 	}
 }

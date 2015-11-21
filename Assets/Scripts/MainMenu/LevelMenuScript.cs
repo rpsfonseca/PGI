@@ -24,4 +24,9 @@ public class LevelMenuScript : MonoBehaviour {
 		Application.LoadLevel (2);
 	}
 
+	public void LevelThreePressed() {
+		Application.LoadLevel (3);
+	}
+	                               
+
 }
