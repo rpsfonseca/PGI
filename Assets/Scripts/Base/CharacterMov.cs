@@ -29,6 +29,7 @@ public class CharacterMov : MonoBehaviour {
 		 
 		float move = Input.GetAxis ("Horizontal");
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+		Debug.Log ("Speed : " + move * maxSpeed);
 
 		anim.SetFloat ("Speed", Mathf.Abs (move));
 
@@ -40,7 +41,7 @@ public class CharacterMov : MonoBehaviour {
 	}
 
 	void Update() {
-		Debug.Log (grounded);
+
 		verticalDeath ();
 		Jump ();
 
