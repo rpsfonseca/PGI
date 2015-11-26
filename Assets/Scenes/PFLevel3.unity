@@ -429,6 +429,7 @@ GameObject:
   - 50: {fileID: 535313175}
   - 61: {fileID: 535313174}
   - 114: {fileID: 535313173}
+  - 95: {fileID: 535313178}
   m_Layer: 9
   m_Name: Character
   m_TagString: Untagged
@@ -526,6 +527,23 @@ Transform:
   - {fileID: 1767895800}
   m_Father: {fileID: 76432016}
   m_RootOrder: 3
+--- !u!95 &535313178
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535313172}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7921fd695912a4663880f3f23ea3dbb0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &802338561
 GameObject:
   m_ObjectHideFlags: 0

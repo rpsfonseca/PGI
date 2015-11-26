@@ -14,9 +14,12 @@ public class CharacterMov : MonoBehaviour {
 	float groundRadious = 0.2f;
 	public LayerMask whatIsGround;
 	public float jumpForce = 0;
+
+	Animator anim;
 	
 	void Start () {
 		Time.timeScale = 1;
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -27,11 +30,13 @@ public class CharacterMov : MonoBehaviour {
 		float move = Input.GetAxis ("Horizontal");
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 
+		anim.SetFloat ("Speed", Mathf.Abs (move));
+
 		 
-		/*if (move > 0 && !facingRight)
+		if (move > 0 && !facingRight)
 			Flip ();
 		else if (move < 0 && facingRight)
-			Flip ();  */
+			Flip ();  
 	}
 
 	void Update() {
@@ -48,6 +53,8 @@ public class CharacterMov : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+
+	 
 	void Jump(){
 		if (grounded == true && Input.GetKeyDown(KeyCode.Space))
 			GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, jumpForce));
