@@ -28,20 +28,21 @@ public class CharacterMov : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
 		 
 		float move = Input.GetAxis ("Horizontal");
+		anim.SetFloat("Speed", Mathf.Abs (move));
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-		Debug.Log ("Speed : " + move * maxSpeed);
 
-		anim.SetFloat ("Speed", Mathf.Abs (move));
+
+
 
 		 
 		if (move > 0 && !facingRight)
 			Flip ();
 		else if (move < 0 && facingRight)
 			Flip ();  
-	}
+	} 
 
 	void Update() {
-
+	
 		verticalDeath ();
 		Jump ();
 

@@ -4,6 +4,7 @@ using System.Collections;
 public class BaseCamera : MonoBehaviour {
 
 	public GameObject character;
+	public int yOffSet;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,6 @@ public class BaseCamera : MonoBehaviour {
 	}
 
 	void CameraXFollow() {
-		GetComponent<Camera>().transform.position = new Vector3 (character.transform.position.x, character.transform.position.y, -11);
+		GetComponent<Camera>().transform.position = new Vector3 (character.transform.position.x, character.transform.position.y + yOffSet, -11);
 	}
 }
