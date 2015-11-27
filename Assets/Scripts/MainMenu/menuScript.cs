@@ -7,8 +7,7 @@ public class menuScript : MonoBehaviour {
 	public Canvas quitMenu;
 	public Button startText;
 	public Button exitText;
-	public Canvas levelMenu;
-	public ScreenFader fader;
+
 
 
 	void Start () {
@@ -17,7 +16,6 @@ public class menuScript : MonoBehaviour {
 		startText = startText.GetComponent<Button> ();
 		exitText = exitText.GetComponent<Button> ();
 		quitMenu.enabled = false;
-		levelMenu = levelMenu.GetComponent<Canvas> ();
 
 	}
 
@@ -43,15 +41,5 @@ public class menuScript : MonoBehaviour {
 		  
 	}
 
-	public IEnumerator LevelsPressed() {
 
-		fader.gameObject.SetActive (true);
-		yield return StartCoroutine (fader.FadeToBlack ()); 
-		GetComponent<Canvas> ().gameObject.SetActive (false);
-		levelMenu.gameObject.SetActive (true);
-
-		yield return StartCoroutine (fader.FadeToClear ());
-		fader.gameObject.SetActive (false);
-
-	}
 }
