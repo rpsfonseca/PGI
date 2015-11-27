@@ -420,7 +420,7 @@ GameObject:
   - 114: {fileID: 247494264}
   - 114: {fileID: 247494267}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,7 +494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ad5bf97f5184a308d8067cb3d4f12e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 0}
 --- !u!1 &391054275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,9 +1904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quitMenu: {fileID: 1609989057}
   startText: {fileID: 479136301}
-  exitText: {fileID: 0}
-  levelMenu: {fileID: 0}
-  fader: {fileID: 1162790929}
+  exitText: {fileID: 1334382629}
 --- !u!1 &1609989054
 GameObject:
   m_ObjectHideFlags: 0
