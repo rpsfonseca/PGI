@@ -6,6 +6,7 @@ public class CharacterMov : MonoBehaviour {
 
 	public float maxSpeed = 10f;
 	bool facingRight = true;
+	bool bounce;
 
 
 
@@ -66,10 +67,17 @@ public class CharacterMov : MonoBehaviour {
 
 
 	void verticalDeath() {
-		if (grounded == true && GetComponent<Rigidbody2D> ().velocity.y < -9.5) {
+		if (bounce == false && grounded == true && GetComponent<Rigidbody2D> ().velocity.y < -9.5) {
 			Application.LoadLevel(Application.loadedLevel);
 		}
+
 	}
 
-
+	void OnCollisionEnter2D (Collision2D col){
+		if (col.collider.sharedMaterial.bounciness > 0) {
+			bounce = true;
+		} else
+			bounce = false;
+		Debug.Log ("Bounce?? :: " + bounce);
+	}
 }
