@@ -65,7 +65,7 @@ public class CharacterMov : MonoBehaviour {
 
 
 	void verticalDeath() {
-		if (grounded == true && GetComponent<Rigidbody2D> ().velocity.y < -7.5) {
+		if (grounded == true && GetComponent<Rigidbody2D> ().velocity.y < -15) {
 			Application.LoadLevel(Application.loadedLevel);
 		}
 	}
