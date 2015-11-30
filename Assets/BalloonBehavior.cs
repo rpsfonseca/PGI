@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BalloonBehavior : MonoBehaviour {
 
-	public Rigidbody2D character;
+	public GameObject character;
 	Vector3 initialGrav;
 	bool isFlying = false;
 	public GameObject egg;
@@ -15,15 +15,21 @@ public class BalloonBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (isFlying == true) {
+			character.GetComponent<Rigidbody2D> ().velocity = new Vector2(0,2);
+		}
 	}
 
+	public void setFlying(bool value){
+		isFlying = value;
+	}
+	
 	void OnCollisionEnter2D( Collision2D col){
 		if (col.gameObject.name.Equals ("Character")) {
 			Debug.Log("Entrou no collider");
 			createJoint();
-			if (isFlying == true) {
-				StartGeneratingEggs();
-			}
+			isFlying = true;
+			StartGeneratingEggs();
 		}
 
 		if (col.gameObject.name.Equals ("egg")) {
@@ -36,7 +42,8 @@ public class BalloonBehavior : MonoBehaviour {
 	//	GetComponent<GameObject> ().AddComponent<DistanceJoint2D> ();
 	//	GetComponent<GameObject> ().GetComponent<DistanceJoint2D> ().connectedBody = character;
 	//	GetComponent<GameObject> ().GetComponent<DistanceJoint2D> ().distance = 0.5f;
-		Physics2D.gravity = new Vector3 (0, 0.5f, 0);
+		//Physics2D.gravity = new Vector3 (0, 0.5f, 0);
+
 		isFlying = true;
 
 	}
@@ -44,15 +51,17 @@ public class BalloonBehavior : MonoBehaviour {
 	void deleteJoint() {
 
 	//	GetComponent<GameObject> ();
-		Physics2D.gravity = initialGrav;
+	//	Physics2D.gravity = initialGrav;
 	}
 
 	void StartGeneratingEggs(){
-		InvokeRepeating ("GenerateEgg", 2f, 3f);
+			InvokeRepeating ("GenerateEgg", 1f, 2f);
 	}
 
 	void GenerateEgg(){
-		Instantiate (egg);
+		if (isFlying == true) {
+			Instantiate (egg);
+		}
 	}
 
 
