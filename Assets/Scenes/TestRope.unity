@@ -100,7 +100,7 @@ GameObject:
   - 232: {fileID: 120712304}
   m_Layer: 0
   m_Name: PieceOfRope (7)
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &121795784
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ DistanceJoint2D:
   m_Anchor: {x: 5.33527782e-08, y: -3.84203588e-07}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .111000001
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &273321387
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +386,7 @@ GameObject:
   - 232: {fileID: 283118265}
   m_Layer: 0
   m_Name: PieceOfRope (13)
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -491,7 +491,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &356313177
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ GameObject:
   - 232: {fileID: 356313183}
   m_Layer: 0
   m_Name: PieceOfRope (11)
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -612,7 +612,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1001 &357295452
 Prefab:
   m_ObjectHideFlags: 0
@@ -710,7 +710,7 @@ GameObject:
   - 232: {fileID: 366371333}
   m_Layer: 0
   m_Name: PieceOfRope (8)
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -815,7 +815,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &495021946
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +826,7 @@ GameObject:
   - 4: {fileID: 495021947}
   m_Layer: 0
   m_Name: Rope
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -901,6 +901,35 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &669732358 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 193110, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
+  m_PrefabInternal: {fileID: 669732357}
+--- !u!114 &669732359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669732358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef72025f6e315f4b8c1750e4ea4e33c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!232 &669732360
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669732358}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Distance: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &757467667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1050,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &848453964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1066,7 @@ GameObject:
   - 232: {fileID: 848453970}
   m_Layer: 0
   m_Name: PieceOfRope (9)
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1142,7 +1171,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &923718938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,7 +1187,7 @@ GameObject:
   - 232: {fileID: 923718944}
   m_Layer: 0
   m_Name: PieceOfRope (5)
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1263,7 +1292,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &1023242675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,7 +1308,7 @@ GameObject:
   - 232: {fileID: 1023242681}
   m_Layer: 0
   m_Name: PieceOfRope (10)
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1384,7 +1413,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &1114759403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1429,7 @@ GameObject:
   - 232: {fileID: 1114759409}
   m_Layer: 0
   m_Name: PieceOfRope (12)
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1505,7 +1534,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &1379383946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1655,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &1602062339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,7 +1776,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0900000036
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &1638684911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,7 +1792,7 @@ GameObject:
   - 232: {fileID: 1638684917}
   m_Layer: 0
   m_Name: PieceOfRope (6)
-  m_TagString: Untagged
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1868,7 +1897,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &1959195844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,7 +2018,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
 --- !u!1 &1960528896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,4 +2139,4 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_Distance: .0590000004
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0
