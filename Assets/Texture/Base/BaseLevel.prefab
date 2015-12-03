@@ -219,7 +219,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -348,6 +348,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294966783
   jumpForce: 300
+  camera: {fileID: 2073398}
 --- !u!114 &11445866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,6 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 193110}
+  yOffSet: 0
 --- !u!124 &12438960
 Behaviour:
   m_ObjectHideFlags: 1
@@ -503,6 +505,22 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: c5f119aafc38a40f4a30385090993b11,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 2073398}
+    - target: {fileID: 0}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 106898}
