@@ -12,7 +12,20 @@ public class BaseCamera : MonoBehaviour {
 	void Start () {
 		originalSize = GetComponent<Camera> ().orthographicSize;
 	}
+
+	void FixedUpdate(){
+
+	if (mapOn == true) {
+			float xAxisValue = Input.GetAxis ("Horizontal");
+			float yAxisValue = Input.GetAxis ("Vertical");
+
+
+			GetComponent<Camera> ().transform.Translate (new Vector3 (xAxisValue, yAxisValue, 0.0f));
+		}
+
+
 	
+	}
 	// Update is called once per frame
 	void Update () {
 		CameraXFollow ();
@@ -29,11 +42,15 @@ public class BaseCamera : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.M) == true && mapOn == false) {
 			GetComponent<Camera> ().orthographicSize = 20;
 			mapOn = true;
-			Time.timeScale = 0;
+			//Time.timeScale = 0;
 		} else if(Input.GetKeyDown(KeyCode.M) == true && mapOn == true) {
 			GetComponent<Camera> ().orthographicSize = originalSize;
 			mapOn = false;
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 		}
+	}
+
+	public bool getMapOn(){
+		return mapOn;
 	}
 }

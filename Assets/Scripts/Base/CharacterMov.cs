@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -15,6 +15,7 @@ public class CharacterMov : MonoBehaviour {
 	float groundRadious = 0.2f;
 	public LayerMask whatIsGround;
 	public float jumpForce = 0;
+	public Camera camera;
 
 	Animator anim;
 	
@@ -28,18 +29,20 @@ public class CharacterMov : MonoBehaviour {
 
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
 		 
-		float move = Input.GetAxis ("Horizontal");
-		anim.SetFloat("Speed", Mathf.Abs (move));
-		GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+
+		if (camera.GetComponent<BaseCamera>().getMapOn() == false) {
+			float move = Input.GetAxis ("Horizontal");
+			anim.SetFloat ("Speed", Mathf.Abs (move));
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y); 
+
+			if (move > 0 && !facingRight)
+				Flip ();
+			else if (move < 0 && facingRight)
+				Flip ();  
 
 
+		}
 
-
-		 
-		if (move > 0 && !facingRight)
-			Flip ();
-		else if (move < 0 && facingRight)
-			Flip ();  
 	} 
 
 	void Update() {
