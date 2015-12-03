@@ -1058,7 +1058,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 813074271}
   egg: {fileID: 172322326}
-  counter: 0
 --- !u!1001 &1659077329
 Prefab:
   m_ObjectHideFlags: 0
@@ -1322,7 +1321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 813074271}
   egg: {fileID: 172322326}
-  counter: 0
 --- !u!95 &1906125725
 Animator:
   serializedVersion: 3
