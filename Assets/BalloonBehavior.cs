@@ -8,6 +8,7 @@ public class BalloonBehavior : MonoBehaviour {
 	bool isFlying = false;
 	public GameObject egg;
 
+
 	// Use this for initialization
 	void Start () {
 		initialGrav = Physics2D.gravity;
@@ -30,6 +31,7 @@ public class BalloonBehavior : MonoBehaviour {
 			createJoint();
 			isFlying = true;
 			StartGeneratingEggs();
+
 		}
 
 		if (col.gameObject.name.Equals ("egg")) {

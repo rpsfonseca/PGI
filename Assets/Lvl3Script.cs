@@ -9,6 +9,8 @@ public class Lvl3Script : MonoBehaviour {
 	public GameObject heliumPad;
 	public GameObject character;
 
+	bool characterFlying;
+
 	// Use this for initialization
 
 	float originalX;
