@@ -17,6 +17,8 @@ public class CharacterMov : MonoBehaviour {
 	public float jumpForce = 0;
 	public Camera camera;
 
+	Vector2 normalGrav;
+
 	Animator anim;
 	
 	void Start () {

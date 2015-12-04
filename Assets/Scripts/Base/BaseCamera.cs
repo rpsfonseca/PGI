@@ -20,7 +20,9 @@ public class BaseCamera : MonoBehaviour {
 			float yAxisValue = Input.GetAxis ("Vertical");
 
 
+
 			GetComponent<Camera> ().transform.Translate (new Vector3 (xAxisValue, yAxisValue, 0.0f));
+
 		}
 
 
