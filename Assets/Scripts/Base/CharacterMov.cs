@@ -30,7 +30,7 @@ public class CharacterMov : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
 		 
 
-		if (camera.GetComponent<BaseCamera>().getMapOn() == false) {
+		if (camera.GetComponent<BaseCamera> ().getMapOn () == false) {
 			float move = Input.GetAxis ("Horizontal");
 			anim.SetFloat ("Speed", Mathf.Abs (move));
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y); 
@@ -41,6 +41,9 @@ public class CharacterMov : MonoBehaviour {
 				Flip ();  
 
 
+		} else {
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
+			anim.SetFloat ("Speed", Mathf.Abs (0));
 		}
 
 	} 
