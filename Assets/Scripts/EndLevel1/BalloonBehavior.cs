@@ -41,10 +41,14 @@ public class BalloonBehavior : MonoBehaviour {
 
 
 	void createJoint() {
-	//	GetComponent<GameObject> ().AddComponent<DistanceJoint2D> ();
-	//	GetComponent<GameObject> ().GetComponent<DistanceJoint2D> ().connectedBody = character;
-	//	GetComponent<GameObject> ().GetComponent<DistanceJoint2D> ().distance = 0.5f;
-		//Physics2D.gravity = new Vector3 (0, 0.5f, 0);
+
+
+		gameObject.AddComponent<DistanceJoint2D> ();
+		GetComponent<DistanceJoint2D> ().connectedBody = character.GetComponent<Rigidbody2D> ();
+		GetComponent<DistanceJoint2D> ().distance = 0;
+		GetComponent<Rigidbody2D> ().gravityScale = -0.2f;
+		GetComponent<DistanceJoint2D> ().anchor = new Vector2 (0, -2);
+
 
 		isFlying = true;
 

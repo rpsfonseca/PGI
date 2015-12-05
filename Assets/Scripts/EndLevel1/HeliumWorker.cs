@@ -5,7 +5,7 @@ public class HeliumWorker : MonoBehaviour {
 
 	public GameObject balloon;
 	public GameObject character;
-	public Sprite[] balloonColor = new Sprite[6];
+	public Sprite[] balloonColor = new Sprite[6]; 
 
 	// Use this for initialization
 	void Start () {
