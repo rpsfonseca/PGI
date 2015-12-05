@@ -18,7 +18,7 @@ public class HeliumWorker : MonoBehaviour {
 	}
 
 	void growBalloon(){
-		if (Input.GetKeyDown (KeyCode.R) && Mathf.Abs (transform.position.x - character.transform.position.x) < 3 && balloon.transform.localScale.x == 0) {
+		if (Input.GetKeyDown (KeyCode.R) && Mathf.Abs (transform.position.x - character.transform.position.x) < 3 && balloon.transform.localScale.x == 0 && Mathf.Abs(transform.position.y - character.transform.position.y) < 2)  {
 			balloon.GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
 			balloon.GetComponent<Animator>().SetTrigger("BalloonGrow");
 
