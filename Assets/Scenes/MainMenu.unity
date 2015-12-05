@@ -206,7 +206,7 @@ GameObject:
   - 114: {fileID: 130477198}
   - 114: {fileID: 130477197}
   m_Layer: 5
-  m_Name: Level3image_btn
+  m_Name: Level3Image_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,6 +494,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ad5bf97f5184a308d8067cb3d4f12e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageArray:
+  - {fileID: 21300000, guid: cd1aba16cc81a477180c4dfad2ce04bb, type: 3}
+  - {fileID: 21300000, guid: d5d61db0a191d4de28323003bacf0e49, type: 3}
+  - {fileID: 21300000, guid: d97a8275d42354f0395d449b7b8b1ceb, type: 3}
+  locked: {fileID: 21300000, guid: e6ee1c763e68548bb91a9095cc7554eb, type: 3}
 --- !u!1 &391054275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,6 +1552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24c2659577f64a3d88cb8fb9d260a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  isFading: 0
 --- !u!1 &1270176075
 GameObject:
   m_ObjectHideFlags: 0

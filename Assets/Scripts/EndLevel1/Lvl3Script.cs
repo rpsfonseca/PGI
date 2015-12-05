@@ -33,7 +33,7 @@ public class Lvl3Script : MonoBehaviour {
 
 	void increaseBalloon(){
 		if (Input.GetKeyDown (KeyCode.R) && Mathf.Abs (heliumPad.transform.position.x - character.transform.position.x) < 3) {
-			anim.SetTrigger("Rpressed");
+			anim.SetTrigger("BalloonGrow");
 			/*if(balloon.transform.localScale.x > 4)
 				balloon.transform.localScale = new Vector3(originalX,originalY,originalZ);
 			else
