@@ -4,9 +4,11 @@ using System.Collections;
 public class BalloonBehavior : MonoBehaviour {
 
 	public GameObject character;
+	public Lvl3Script script;
 	Vector3 initialGrav;
 	bool isFlying = false;
 	public GameObject egg;
+
 
 
 	// Use this for initialization
@@ -27,10 +29,10 @@ public class BalloonBehavior : MonoBehaviour {
 	
 	void OnCollisionEnter2D( Collision2D col){
 		if (col.gameObject.name.Equals ("Character")) {
-			Debug.Log("Entrou no collider");
 			createJoint();
-			isFlying = true;
-			StartGeneratingEggs();
+			//StartGeneratingEggs();
+			script.IncreaseBalloonCounter();
+
 
 		}
 
