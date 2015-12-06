@@ -27,7 +27,11 @@ public class EggBehavior : MonoBehaviour {
 		Debug.Log ("Entrou no collider");
 		if (!this.name.Equals ("Egg")) {
 			Destroy(this.gameObject);
+		}else if(col.gameObject.name.Equals("Character")){
+			Debug.Log ("BAteu num balao");
+			Destroy(col.gameObject);
 		}
+
 		//if (col.gameObject.name.Equals ("Character")) {
 		//	script.GetComponent<BalloonBehavior> ().setFlying (false);
 		//} else if(!this.name.Equals("Egg")) {
