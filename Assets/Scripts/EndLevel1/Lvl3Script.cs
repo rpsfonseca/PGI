@@ -20,7 +20,7 @@ public class Lvl3Script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		characterFloat ();
 	}
 	
 
@@ -41,6 +41,11 @@ public class Lvl3Script : MonoBehaviour {
 		if (balloonCounter > 0) {
 			Instantiate (egg);
 		}
+	}
+
+	void characterFloat(){
+		if(balloonCounter > 0)
+			character.GetComponent<Rigidbody2D>().velocity = (new Vector2(character.GetComponent<Rigidbody2D> ().velocity.x, 0.5f * balloonCounter));
 	}
 
 	
