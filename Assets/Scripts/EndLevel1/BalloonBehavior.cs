@@ -5,7 +5,8 @@ public class BalloonBehavior : MonoBehaviour {
 
 	public GameObject character;
 	public Lvl3Script script;
-	Vector3 initialGrav;
+
+	
 	bool isFlying = false;
 	public GameObject egg;
 
@@ -13,15 +14,14 @@ public class BalloonBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		initialGrav = Physics2D.gravity;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (isFlying == true) {
-			character.GetComponent<Rigidbody2D> ().velocity = new Vector2(0,2);
-		}
+
 	}
+
+
 
 	public void setFlying(bool value){
 		isFlying = value;
@@ -58,19 +58,9 @@ public class BalloonBehavior : MonoBehaviour {
 
 	void deleteJoint() {
 
-	//	GetComponent<GameObject> ();
-	//	Physics2D.gravity = initialGrav;
 	}
 
-	void StartGeneratingEggs(){
-			InvokeRepeating ("GenerateEgg", 1f, 2f);
-	}
 
-	void GenerateEgg(){
-		if (isFlying == true) {
-			Instantiate (egg);
-		}
-	}
 
 
 }

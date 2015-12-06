@@ -4,12 +4,18 @@ using System.Collections;
 public class EggBehavior : MonoBehaviour {
 
 	public GameObject character;
-	float randomness = 10;
-	public GameObject script;
+	public GameObject leftWall;
+	public GameObject rightWall;
+
+
+	
+	float randomness;
+
 
 	// Use this for initialization
 	void Start () {
-		transform.position = new Vector3 (transform.position.x + ( randomness * Random.value) , character.transform.position.y + 10, transform.position.z);
+		randomness = rightWall.transform.position.x - leftWall.transform.position.x;
+		transform.position = new Vector3 (rightWall.transform.position.x - ( randomness * Random.value) , character.transform.position.y + 10, transform.position.z);
 	}
 	
 	// Update is called once per frame
@@ -19,10 +25,13 @@ public class EggBehavior : MonoBehaviour {
 
 	void OnCollisionEnter2D( Collision2D col){
 		Debug.Log ("Entrou no collider");
-		if (col.gameObject.name.Equals ("Character")) {
-			script.GetComponent<BalloonBehavior> ().setFlying (false);
-		} else if(!this.name.Equals("Egg")) {
+		if (!this.name.Equals ("Egg")) {
 			Destroy(this.gameObject);
 		}
+		//if (col.gameObject.name.Equals ("Character")) {
+		//	script.GetComponent<BalloonBehavior> ().setFlying (false);
+		//} else if(!this.name.Equals("Egg")) {
+		//	Destroy(this.gameObject);
+		//}
 	}
 }

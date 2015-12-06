@@ -5,6 +5,7 @@ public class Lvl3Script : MonoBehaviour {
 
 	int balloonCounter;
 
+	public GameObject egg;
 	public GameObject character;
 
 	bool characterFlying;
@@ -14,13 +15,14 @@ public class Lvl3Script : MonoBehaviour {
 
 	void Start () {
 		balloonCounter = 0;
+		StartGeneratingEggs ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("Number of balloons: " + balloonCounter);
-	}
 
+	}
+	
 
 	public void IncreaseBalloonCounter(){
 		balloonCounter++;
@@ -28,6 +30,17 @@ public class Lvl3Script : MonoBehaviour {
 
 	public void DecreaseBalloonCounter(){
 		balloonCounter--;
+	}
+
+	void StartGeneratingEggs(){
+		InvokeRepeating ("GenerateEgg", 1f, 2f);
+	}
+	
+
+	void GenerateEgg(){
+		if (balloonCounter > 0) {
+			Instantiate (egg);
+		}
 	}
 
 	
