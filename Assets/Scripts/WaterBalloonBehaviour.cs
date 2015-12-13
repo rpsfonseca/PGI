@@ -18,10 +18,13 @@ public class WaterBalloonBehaviour : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
+		if(col.gameObject.name.Equals("Character")){
+			Application.LoadLevel(Application.loadedLevel);
+		}
 		Debug.Log ("Destroyed");
 		Destroy (this.gameObject);
 		}
 
-	}
+}
 
 
