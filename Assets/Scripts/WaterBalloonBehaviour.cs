@@ -17,10 +17,11 @@ public class WaterBalloonBehaviour : MonoBehaviour {
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (10, 0);
 	}
 
-	void OnCollisionEnter2D(){
+	void OnCollisionEnter2D(Collision2D col){
 		Debug.Log ("Destroyed");
 		Destroy (this.gameObject);
+		}
+
 	}
 
 
-}
