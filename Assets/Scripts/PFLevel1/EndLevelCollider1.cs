@@ -4,10 +4,12 @@ using System.Collections;
 public class EndLevelCollider1 : MonoBehaviour {
 		
 	public GameObject script;
+	//LevelMenuScript lvlMenuScripts;
 	public int levelToLoad = 0;
 	bool isCompleted = false;
 	// Use this for initialization
 	void Start () {
+
 	}
 		
 	// Update is called once per frame
@@ -17,7 +19,7 @@ public class EndLevelCollider1 : MonoBehaviour {
 		
 	void OnCollisionEnter2D(){
 		if(script.GetComponent<HintMessage1> ().getValid()){
-
+			PlayerPrefs.SetInt("lvl2",1);
 			Application.LoadLevel(levelToLoad);
 		}
 	}
