@@ -37,19 +37,19 @@ public class LevelMenuScript : MonoBehaviour {
 		if (PlayerPrefs.HasKey("lvl4")) {
 			transform.FindChild("Level4Image_btn").GetComponent<Image>().sprite = imageArray [2];
 		} else {
-			transform.FindChild("Level3Image_btn").GetComponent<Image>().sprite = locked;
+			transform.FindChild("Level4Image_btn").GetComponent<Image>().sprite = locked;
 		}
 
 		if (PlayerPrefs.HasKey("lvl5")) {
 			transform.FindChild("Level5Image_btn").GetComponent<Image>().sprite = imageArray [2];
 		} else {
-			transform.FindChild("Level3Image_btn").GetComponent<Image>().sprite = locked;
+			transform.FindChild("Level5Image_btn").GetComponent<Image>().sprite = locked;
 		}
 
 		if (PlayerPrefs.HasKey("lvl6")) {
 			transform.FindChild("Level6Image_btn").GetComponent<Image>().sprite = imageArray [2];
 		} else {
-			transform.FindChild("Level3Image_btn").GetComponent<Image>().sprite = locked;
+			transform.FindChild("Level6Image_btn").GetComponent<Image>().sprite = locked;
 		}
 
 
