@@ -301,7 +301,7 @@ GameObject:
   - 114: {fileID: 262580904}
   - 114: {fileID: 262580903}
   m_Layer: 5
-  m_Name: Level4Image_btn
+  m_Name: Level6Image_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1105,7 +1105,7 @@ GameObject:
   - 114: {fileID: 831645772}
   - 114: {fileID: 831645771}
   m_Layer: 5
-  m_Name: Level5Image_btn
+  m_Name: Level4Image_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1684,6 +1684,14 @@ Prefab:
       propertyPath: m_TagString
       value: LevelsChoose
       objectReference: {fileID: 0}
+    - target: {fileID: 22438280, guid: 40d2867eeff4d4f279a35e5e8a7336c8, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22476314, guid: 40d2867eeff4d4f279a35e5e8a7336c8, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40d2867eeff4d4f279a35e5e8a7336c8, type: 2}
   m_IsPrefabParent: 0
@@ -2101,7 +2109,7 @@ GameObject:
   - 114: {fileID: 1634550839}
   - 114: {fileID: 1634550838}
   m_Layer: 5
-  m_Name: Level6Image_btn
+  m_Name: Level5Image_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
