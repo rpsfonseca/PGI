@@ -41,5 +41,9 @@ public class menuScript : MonoBehaviour {
 		  
 	}
 
+	public void ResetPlayerPrefs(){
+		PlayerPrefs.DeleteAll ();
+	}
+
 
 }

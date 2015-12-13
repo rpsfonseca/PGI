@@ -17,20 +17,43 @@ public class LevelMenuScript : MonoBehaviour {
 		//PlayerPrefs.SetInt ("lvl2", level2);
 		//level2 = PlayerPrefs.GetInt ("lvl2");
 
-		DontDestroyOnLoad(this.gameObject);
+		DontDestroyOnLoad (this.gameObject);
+	}
 
+	void Update(){
 
-		if (completedTable [1] == true || PlayerPrefs.HasKey("lvl2")) {
+		if (PlayerPrefs.HasKey("lvl2")) {
 			transform.FindChild("Level2Image_btn").GetComponent<Image>().sprite = imageArray [1];
 		} else {
 			transform.FindChild("Level2Image_btn").GetComponent<Image>().sprite = locked;
 		}
 
-		if (completedTable [2] == true || PlayerPrefs.HasKey("lvl3")) {
+		if (PlayerPrefs.HasKey("lvl3")) {
 			transform.FindChild("Level3Image_btn").GetComponent<Image>().sprite = imageArray [2];
 		} else {
 			transform.FindChild("Level3Image_btn").GetComponent<Image>().sprite = locked;
 		}
+
+		if (PlayerPrefs.HasKey("lvl4")) {
+			transform.FindChild("Level4Image_btn").GetComponent<Image>().sprite = imageArray [2];
+		} else {
+			transform.FindChild("Level3Image_btn").GetComponent<Image>().sprite = locked;
+		}
+
+		if (PlayerPrefs.HasKey("lvl5")) {
+			transform.FindChild("Level5Image_btn").GetComponent<Image>().sprite = imageArray [2];
+		} else {
+			transform.FindChild("Level3Image_btn").GetComponent<Image>().sprite = locked;
+		}
+
+		if (PlayerPrefs.HasKey("lvl6")) {
+			transform.FindChild("Level6Image_btn").GetComponent<Image>().sprite = imageArray [2];
+		} else {
+			transform.FindChild("Level3Image_btn").GetComponent<Image>().sprite = locked;
+		}
+
+
+
 
 	}
 
@@ -47,11 +70,28 @@ public class LevelMenuScript : MonoBehaviour {
 	}
 
 	public void LevelTwoPressed() {
-		Application.LoadLevel (2);
+		if(PlayerPrefs.HasKey("lvl2"))
+			Application.LoadLevel (2);
 	}
 
 	public void LevelThreePressed() {
-		Application.LoadLevel (3);
+		if(PlayerPrefs.HasKey("lvl3"))
+			Application.LoadLevel (3);
+	}
+
+	public void LevelFourPressed() {
+		if(PlayerPrefs.HasKey("lvl4"))
+			Application.LoadLevel (4);
+	}
+
+	public void LevelFivePressed() {
+		if(PlayerPrefs.HasKey("lvl5"))
+			Application.LoadLevel (5);
+	}
+
+	public void LevelSixPressed() {
+		if(PlayerPrefs.HasKey("lvl6"))
+			Application.LoadLevel (6);
 	}
 	                               
 
