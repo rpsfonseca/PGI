@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class HintMessage2 : MonoBehaviour {
-
+    //
 	public Text hintMessage;
 	public GameObject arrow;
 	public GameObject character;
