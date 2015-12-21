@@ -83,10 +83,14 @@ public class CharacterMov : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D (Collision2D col){
-		if (col.collider.sharedMaterial.bounciness > 0) {
-			bounce = true;
-		} else
-			bounce = false;
-		Debug.Log ("Bounce?? :: " + bounce);
+        if(col.collider.sharedMaterial != null) {
+            if (col.collider.sharedMaterial.bounciness > 0)
+            {
+                bounce = true;
+            }
+            else
+                bounce = false;
+            Debug.Log("Bounce?? :: " + bounce);
+        }	
 	}
 }
