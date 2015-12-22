@@ -890,6 +890,7 @@ MonoBehaviour:
   maxSpeed: 5
   grounded: 0
   groundCheck: {fileID: 1856310469}
+  groundRadious: .200000003
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294966527
@@ -964,6 +965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a0efb92d284114f9bea7d2463780eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weCanControlPendulum: 0
+  comando: {fileID: 1830470517}
+  comandoBoxColl2D: {fileID: 0}
+  comandoSprite: {fileID: 0}
+  pendulum: {fileID: 400731494}
+  pendulumController: {fileID: 0}
 --- !u!1 &854281825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,8 +1157,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 901718865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.05999994, y: 4.88999987, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: -1.66999996, y: 4.88999987, z: 0}
+  m_LocalScale: {x: .394477844, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2030,7 +2037,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1830470517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.28999996, y: 1.39999998, z: 0}
+  m_LocalPosition: {x: -6.21999979, y: 4.26999998, z: 0}
   m_LocalScale: {x: .150000006, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2059,7 +2066,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

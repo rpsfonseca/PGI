@@ -12,7 +12,7 @@ public class CharacterMov : MonoBehaviour {
 
 	public bool grounded  = false;
 	public Transform groundCheck;
-	float groundRadious = 0.2f;
+	public float groundRadious = 0.2f;
 	public LayerMask whatIsGround;
 	public float jumpForce = 0;
 	public Camera camera;
