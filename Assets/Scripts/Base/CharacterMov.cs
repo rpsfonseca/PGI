@@ -7,7 +7,7 @@ public class CharacterMov : MonoBehaviour {
 	public float maxSpeed = 10f;
 	bool facingRight = true;
 	bool bounce;
-
+	bool isLadder = false;
 
 
 	public bool grounded  = false;
@@ -16,6 +16,8 @@ public class CharacterMov : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public float jumpForce = 0;
 	public Camera camera;
+
+
 
 	Vector2 normalGrav;
 
@@ -35,7 +37,15 @@ public class CharacterMov : MonoBehaviour {
 		if (camera.GetComponent<BaseCamera> ().getMapOn () == false) {
 			float move = Input.GetAxis ("Horizontal");
 			anim.SetFloat ("Speed", Mathf.Abs (move));
+			if(isLadder == true){
+				float move2 = Input.GetAxis("Vertical");
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, move2 * maxSpeed); 
+			}
+			else{
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y); 
+			}
+
+
 
 			if (move > 0 && !facingRight)
 				Flip ();
@@ -94,5 +104,9 @@ public class CharacterMov : MonoBehaviour {
                 bounce = false;
             Debug.Log("Bounce?? :: " + bounce);
         }	
+	}
+
+	public void setIsLadder(bool value){
+		isLadder = value;
 	}
 }
