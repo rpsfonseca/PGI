@@ -58,6 +58,8 @@ public class CharacterMov : MonoBehaviour {
 			anim.SetFloat ("Speed", Mathf.Abs (0));
 		}
 
+		stopPoofGravity ();
+
 	} 
 
 	void Update() {
@@ -109,4 +111,13 @@ public class CharacterMov : MonoBehaviour {
 	public void setIsLadder(bool value){
 		isLadder = value;
 	}
+
+	public void stopPoofGravity(){
+		float grav = Physics2D.gravity.y;
+		if (isLadder == true) {
+			GetComponent<Rigidbody2D> ().AddForce(new Vector2(0, -grav));
+		}
+	}
+
+
 }
