@@ -24,12 +24,12 @@ public class CharacterMov : MonoBehaviour {
 	void Start () {
 		Time.timeScale = 1;
 		anim = GetComponent<Animator> ();
-	}
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
+        grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
 		 
 
 		if (camera.GetComponent<BaseCamera> ().getMapOn () == false) {

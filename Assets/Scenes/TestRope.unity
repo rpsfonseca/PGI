@@ -85,76 +85,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &128628113
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 136358, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 128628114}
-  - 212: {fileID: 128628116}
-  - 61: {fileID: 128628115}
-  m_Layer: 0
-  m_Name: Floor (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &128628114
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 497818, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 128628113}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.42000008, y: -7.95120811, z: -8.80628586}
-  m_LocalScale: {x: 10, y: 1.9367795, z: .782536983}
-  m_Children: []
-  m_Father: {fileID: 1988778564}
-  m_RootOrder: 4
---- !u!61 &128628115
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6143264, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 128628113}
-  m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 714682a1065ff4de7b18b69a824dd408, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1.17999995, y: 1.23000002}
---- !u!212 &128628116
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21268666, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 128628113}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d8654b24d940945688b02c182d615bb7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &357295452
 Prefab:
   m_ObjectHideFlags: 0
@@ -317,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 396461932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.05000019, y: 7.03999996, z: 0}
+  m_LocalPosition: {x: -8.23999977, y: 7.19000006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -335,7 +265,8 @@ GameObject:
   - 233: {fileID: 400731496}
   - 58: {fileID: 400731499}
   - 232: {fileID: 400731500}
-  m_Layer: 0
+  - 114: {fileID: 400731501}
+  m_Layer: 8
   m_Name: ball
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -441,8 +372,19 @@ DistanceJoint2D:
   m_ConnectedRigidBody: {fileID: 1567853103}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: .970000029, y: .0599999987}
-  m_Distance: 2.52999997
+  m_Distance: 2.94000006
   m_MaxDistanceOnly: 0
+--- !u!114 &400731501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400731494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e361c1c7c037ae4bad7b7e7f5c3cb78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &421163051
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +465,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 441563998}
   - 212: {fileID: 441563997}
+  - 61: {fileID: 441564000}
+  - 50: {fileID: 441563999}
   m_Layer: 0
   m_Name: ladder1
   m_TagString: Untagged
@@ -568,6 +512,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!50 &441563999
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441563996}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &441564000
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441563996}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .180000007, y: 3.1500001}
 --- !u!1 &462514163
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +553,7 @@ GameObject:
   - 50: {fileID: 462514167}
   - 233: {fileID: 462514166}
   - 61: {fileID: 462514165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda8
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -686,7 +659,7 @@ GameObject:
   - 50: {fileID: 552094706}
   - 233: {fileID: 552094708}
   - 61: {fileID: 552094707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda9
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -849,26 +822,14 @@ GameObject:
   - 114: {fileID: 669732363}
   - 95: {fileID: 669732362}
   - 232: {fileID: 669732360}
-  - 114: {fileID: 669732359}
   - 114: {fileID: 669732367}
   m_Layer: 9
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &669732359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669732358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ef72025f6e315f4b8c1750e4ea4e33c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!232 &669732360
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -931,7 +892,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1856310469}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4294966783
+    m_Bits: 4294966527
   jumpForce: 300
   camera: {fileID: 1945113499}
 --- !u!61 &669732364
@@ -1015,7 +976,7 @@ GameObject:
   - 50: {fileID: 854281827}
   - 233: {fileID: 854281829}
   - 61: {fileID: 854281828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda4
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -1276,7 +1237,7 @@ GameObject:
   - 50: {fileID: 1151382342}
   - 233: {fileID: 1151382341}
   - 61: {fileID: 1151382340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda7
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -1382,7 +1343,7 @@ GameObject:
   - 50: {fileID: 1269697950}
   - 233: {fileID: 1269697952}
   - 61: {fileID: 1269697951}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda10
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -1488,7 +1449,7 @@ GameObject:
   - 50: {fileID: 1288443257}
   - 233: {fileID: 1288443256}
   - 61: {fileID: 1288443259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda2
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -1594,7 +1555,7 @@ GameObject:
   - 50: {fileID: 1336189259}
   - 233: {fileID: 1336189258}
   - 61: {fileID: 1336189261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda1
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -1700,7 +1661,7 @@ GameObject:
   - 50: {fileID: 1432743497}
   - 233: {fileID: 1432743496}
   - 61: {fileID: 1432743495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda3
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -1974,7 +1935,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1567853102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.53999996, y: 7.3499999, z: 0}
+  m_LocalPosition: {x: -7.73000002, y: 7.5, z: 0}
   m_LocalScale: {x: .5, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2115,7 +2076,7 @@ GameObject:
   - 50: {fileID: 1837615518}
   - 233: {fileID: 1837615517}
   - 61: {fileID: 1837615516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda5
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -2353,7 +2314,7 @@ GameObject:
   - 50: {fileID: 1979123696}
   - 233: {fileID: 1979123695}
   - 61: {fileID: 1979123694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: corda6
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -2461,6 +2422,5 @@ Transform:
   - {fileID: 558725063}
   - {fileID: 669732361}
   - {fileID: 1945113500}
-  - {fileID: 128628114}
   m_Father: {fileID: 0}
   m_RootOrder: 2
