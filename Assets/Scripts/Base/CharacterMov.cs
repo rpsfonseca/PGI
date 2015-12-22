@@ -68,8 +68,10 @@ public class CharacterMov : MonoBehaviour {
 
 	 
 	void Jump(){
-		if (grounded == true && Input.GetKeyDown(KeyCode.Space))
-			GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, jumpForce));
+		if (grounded == true && Input.GetKeyDown (KeyCode.Space)) {
+			GetComponent<AudioSource> ().Play ();
+			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
+		}
 
 	}
 
