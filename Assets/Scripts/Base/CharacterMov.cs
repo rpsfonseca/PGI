@@ -52,7 +52,7 @@ public class CharacterMov : MonoBehaviour {
 
 	void Update() {
 	
-		verticalDeath ();
+		//verticalDeath ();
 		Jump ();
 		//Debug.Log (" Vertical velocity: " + GetComponent<Rigidbody2D> ().velocity.y);
 

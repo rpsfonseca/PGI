@@ -595,7 +595,7 @@ Transform:
   m_LocalScale: {x: .400000006, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &742007165
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,11 +868,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 491842, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.91999996
+      value: -1.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 491842, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.75999999
+      value: -5.71000004
       objectReference: {fileID: 0}
     - target: {fileID: 21223736, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
       propertyPath: m_Sprite
@@ -969,7 +969,7 @@ Transform:
   m_LocalScale: {x: .400000006, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1 &1345681147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,7 +1081,7 @@ Transform:
   m_LocalScale: {x: 3.73891258, y: .118407719, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1 &1455103504
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,17 +12,16 @@ public class AttachCharacterToRope : MonoBehaviour {
     {
         characterRigidBody2D = GetComponent<Rigidbody2D>();
         characterDistanceJoint2D = GetComponent<DistanceJoint2D>(); 
-        characterDistanceJoint2D.enabled = false;
-        characterDistanceJoint2D.distance = 0;
-        characterIsAttachedToRope = false;
         characterBoxCollider2D = GetComponent<BoxCollider2D>();
-        trackingTimeSinceLastCollisionWithRope = 0;
     }
 
     // Use this for initialization
     void Start () {
-	
-	}
+        characterDistanceJoint2D.enabled = false;
+        characterDistanceJoint2D.distance = 0;
+        characterIsAttachedToRope = false;
+        trackingTimeSinceLastCollisionWithRope = 0;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -41,6 +40,7 @@ public class AttachCharacterToRope : MonoBehaviour {
                 characterDistanceJoint2D.enabled = false;
                 characterIsAttachedToRope = false;
                 characterBoxCollider2D.enabled = true;
+                
             }
         }
     }
@@ -57,7 +57,7 @@ public class AttachCharacterToRope : MonoBehaviour {
                     characterDistanceJoint2D.enabled = true;
                     characterIsAttachedToRope = true;
                     characterBoxCollider2D.enabled = false;
-        
+                    
                 }
                 else if (Time.realtimeSinceStartup - trackingTimeSinceLastCollisionWithRope > 1){
                     trackingTimeSinceLastCollisionWithRope = 0;
@@ -65,9 +65,9 @@ public class AttachCharacterToRope : MonoBehaviour {
                     characterDistanceJoint2D.enabled = true;
                     characterIsAttachedToRope = true;
                     characterBoxCollider2D.enabled = false;
+                    
                 }
             }
         }
-
     }
 }
