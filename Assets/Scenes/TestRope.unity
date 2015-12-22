@@ -465,8 +465,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 441563998}
   - 212: {fileID: 441563997}
-  - 61: {fileID: 441564000}
   - 50: {fileID: 441563999}
+  - 114: {fileID: 441564001}
+  - 61: {fileID: 441564000}
   m_Layer: 0
   m_Name: ladder1
   m_TagString: Untagged
@@ -540,7 +541,19 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .180000007, y: 3.1500001}
+  m_Size: {x: 1.17999995, y: 3.8499999}
+--- !u!114 &441564001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441563996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 862f2d05724b24d579e6b951bb857b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 669732358}
 --- !u!1 &462514163
 GameObject:
   m_ObjectHideFlags: 0

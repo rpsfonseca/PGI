@@ -14,16 +14,24 @@ public class HeliumWorker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		growBalloon ();
+		//growBalloon ();
 	}
 
-	void growBalloon(){
-		if (Input.GetKeyDown (KeyCode.R) && Mathf.Abs (transform.position.x - character.transform.position.x) < 3 && balloon.transform.localScale.x == 0 && Mathf.Abs(transform.position.y - character.transform.position.y) < 2)  {
+//	void growBalloon(){
+		//if (Input.GetKeyDown (KeyCode.R) && Mathf.Abs (transform.position.x - character.transform.position.x) < 3 && balloon.transform.localScale.x == 0 && Mathf.Abs(transform.position.y - character.transform.position.y) < 2)  {
+//			balloon.GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
+//			balloon.GetComponent<Animator>().SetTrigger("BalloonGrow");
+
+		//}
+
+//	}
+
+	void OnTriggerEnter2D(Collider2D col) {
+		Debug.Log ("entrou a maquina");
+		if( col.gameObject.name.Equals("Character")){
 			balloon.GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
 			balloon.GetComponent<Animator>().SetTrigger("BalloonGrow");
-
 		}
-		
 	}
 
 }
