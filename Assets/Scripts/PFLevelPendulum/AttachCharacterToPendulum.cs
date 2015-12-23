@@ -28,8 +28,8 @@ public class AttachCharacterToPendulum : MonoBehaviour {
         characterIsAttachedToPendulum = false;
         maximumPendulumMovement = 0.01f;
         firstTap = false;
-        maximumDistanceBetweenPendulumAndMachine = 2.94f;
-        minimumDistanceBetweenPendulumAndMachine = 0.29f;
+        maximumDistanceBetweenPendulumAndMachine = 3.25f;
+        minimumDistanceBetweenPendulumAndMachine = 0.76f;
         trackingTimeSinceLastCollisionWithPendulum = 0;
         characterJumpedFromPendulum = false;
     }
