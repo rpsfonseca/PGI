@@ -57,7 +57,7 @@ public class BalloonBehavior : MonoBehaviour {
 	}
 
 	void deleteJoint() {
-		deleteJoint (GetComponent<DistanceJoint2D> ());
+		deleteJoint ();
 	}
 
 
