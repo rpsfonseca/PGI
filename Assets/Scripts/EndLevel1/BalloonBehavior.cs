@@ -28,6 +28,7 @@ public class BalloonBehavior : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter2D( Collision2D col){
+		Debug.Log ("Nome " + col.gameObject.name);
 		if (col.gameObject.name.Equals ("Character")) {
 			createJoint();
 			//StartGeneratingEggs();
@@ -37,7 +38,10 @@ public class BalloonBehavior : MonoBehaviour {
 		}
 
 		if (col.gameObject.name.Equals ("egg")) {
-			deleteJoint();
+			Debug.Log ("Entrou no delete");
+			Destroy (GetComponent<DistanceJoint2D> ());
+			script.DecreaseBalloonCounter();
+			//isFlying = false;
 		}
 	}
 
@@ -57,12 +61,12 @@ public class BalloonBehavior : MonoBehaviour {
 	}
 
 	void deleteJoint() {
-		if (Input.GetKeyDown (KeyCode.Space) && isFlying == true ) {
+		if (Input.GetKeyDown (KeyCode.Space)  && isFlying == true ) {
 			Debug.Log ("Entrou no delete");
 			Destroy (GetComponent<DistanceJoint2D> ());
 			script.DecreaseBalloonCounter();
 			isFlying = false;
-		}
+		} 
 	}
 
 

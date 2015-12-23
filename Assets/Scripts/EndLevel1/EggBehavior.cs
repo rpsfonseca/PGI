@@ -29,7 +29,6 @@ public class EggBehavior : MonoBehaviour {
 			Destroy(this.gameObject);
 		}else if(col.gameObject.name.Equals("firstBalloon")){
 			Debug.Log ("BAteu num balao");
-			Destroy(col.gameObject);
 		}
 
 		//if (col.gameObject.name.Equals ("Character")) {
