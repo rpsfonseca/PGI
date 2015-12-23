@@ -18,7 +18,7 @@ public class BalloonBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		deleteJoint ();
 	}
 
 
@@ -36,7 +36,7 @@ public class BalloonBehavior : MonoBehaviour {
 
 		}
 
-		if (col.gameObject.name.Equals ("egg") || Input.GetKeyDown(KeyCode.Space)) {
+		if (col.gameObject.name.Equals ("egg")) {
 			deleteJoint();
 		}
 	}
@@ -57,7 +57,12 @@ public class BalloonBehavior : MonoBehaviour {
 	}
 
 	void deleteJoint() {
-		deleteJoint ();
+		if (Input.GetKeyDown (KeyCode.Space) && isFlying == true ) {
+			Debug.Log ("Entrou no delete");
+			Destroy (GetComponent<DistanceJoint2D> ());
+			script.DecreaseBalloonCounter();
+			isFlying = false;
+		}
 	}
 
 
