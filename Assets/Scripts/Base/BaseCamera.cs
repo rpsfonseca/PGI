@@ -8,9 +8,18 @@ public class BaseCamera : MonoBehaviour {
 	bool mapOn = false;
 	float originalSize;
 
+	public Transform firstWall;
+	public Transform LastWall;
+
+	float max;
+	float min;
+
 	// Use this for initialization
 	void Start () {
 		originalSize = GetComponent<Camera> ().orthographicSize;
+
+		min = firstWall.position.x + 7.5f;
+		max = LastWall.position.x - 7.5f;
 	}
 
 	void FixedUpdate(){
@@ -36,7 +45,14 @@ public class BaseCamera : MonoBehaviour {
 
 	void CameraXFollow() {
 		if (mapOn == false) {
+			Debug.Log("Character: "  + character.transform.position.x + " Min: " + min + " Max : " + max);
+			if(character.transform.position.x > min && character.transform.position.x < max){
+			
 			GetComponent<Camera> ().transform.position = new Vector3 (character.transform.position.x, character.transform.position.y + yOffSet, -11);
+			}
+			else{
+				GetComponent<Camera> ().transform.position = new Vector3 (GetComponent<Camera>().transform.position.x, character.transform.position.y + yOffSet, -11);
+			}
 		}
 	}
 
