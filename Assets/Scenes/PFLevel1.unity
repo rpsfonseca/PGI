@@ -520,6 +520,18 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -8.60000038
       objectReference: {fileID: 0}
+    - target: {fileID: 11445866, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
+      propertyPath: firstWall
+      value: 
+      objectReference: {fileID: 1652499291}
+    - target: {fileID: 153116, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445866, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
+      propertyPath: LastWall
+      value: 
+      objectReference: {fileID: 429348389}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
   m_IsPrefabParent: 0

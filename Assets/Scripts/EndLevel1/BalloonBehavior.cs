@@ -36,7 +36,7 @@ public class BalloonBehavior : MonoBehaviour {
 
 		}
 
-		if (col.gameObject.name.Equals ("egg")) {
+		if (col.gameObject.name.Equals ("egg") || Input.GetKeyDown(KeyCode.Space)) {
 			deleteJoint();
 		}
 	}
@@ -57,7 +57,7 @@ public class BalloonBehavior : MonoBehaviour {
 	}
 
 	void deleteJoint() {
-
+		deleteJoint (GetComponent<DistanceJoint2D> ());
 	}
 
 
