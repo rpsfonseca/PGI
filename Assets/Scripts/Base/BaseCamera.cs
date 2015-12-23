@@ -8,8 +8,8 @@ public class BaseCamera : MonoBehaviour {
 	bool mapOn = false;
 	float originalSize;
 
-	public Transform firstWall;
-	public Transform LastWall;
+	//public Transform firstWall;
+	//public Transform LastWall;
 
 	float max;
 	float min;
@@ -18,8 +18,8 @@ public class BaseCamera : MonoBehaviour {
 	void Start () {
 		originalSize = GetComponent<Camera> ().orthographicSize;
 
-		min = firstWall.position.x + 7.5f;
-		max = LastWall.position.x - 7.5f;
+	//	min = firstWall.position.x + 7.5f;
+	//	max = LastWall.position.x - 7.5f;
 	}
 
 	void FixedUpdate(){

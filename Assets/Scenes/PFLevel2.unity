@@ -203,6 +203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1854228376}
   yOffSet: 3
+  firstWall: {fileID: 2049368744}
+  LastWall: {fileID: 759851901}
 --- !u!81 &362873736
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1002,6 +1004,7 @@ MonoBehaviour:
   maxSpeed: 5
   grounded: 0
   groundCheck: {fileID: 562903458}
+  groundRadious: .200000003
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294966783

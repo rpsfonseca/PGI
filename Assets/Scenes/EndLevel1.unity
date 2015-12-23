@@ -974,6 +974,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 813074271}
   yOffSet: 0
+  firstWall: {fileID: 1414447641}
+  LastWall: {fileID: 281940006}
 --- !u!81 &947767825
 AudioListener:
   m_ObjectHideFlags: 0
