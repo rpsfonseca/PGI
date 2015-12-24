@@ -19,6 +19,7 @@ public class BalloonBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		deleteJoint ();
+		Debug.Log (character.gameObject.name);
 	}
 
 
@@ -26,10 +27,11 @@ public class BalloonBehavior : MonoBehaviour {
 	public void setFlying(bool value){
 		isFlying = value;
 	}
-	
+
 	void OnCollisionEnter2D( Collision2D col){
-		Debug.Log ("Nome " + col.gameObject.name);
-		if (col.gameObject.name.Equals ("Character")) {
+
+		if (col.gameObject.name.Equals(character)){
+			Debug.Log ("Entrou");
 			createJoint();
 			//StartGeneratingEggs();
 			script.IncreaseBalloonCounter();
