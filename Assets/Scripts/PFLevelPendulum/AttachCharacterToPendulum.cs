@@ -28,14 +28,13 @@ public class AttachCharacterToPendulum : MonoBehaviour {
         characterIsAttachedToPendulum = false;
         maximumPendulumMovement = 0.01f;
         firstTap = false;
-        maximumDistanceBetweenPendulumAndMachine = 3.85f;
-        minimumDistanceBetweenPendulumAndMachine = 1.08f;
+        maximumDistanceBetweenPendulumAndMachine = 6.48f;
+        minimumDistanceBetweenPendulumAndMachine = 0.9f;
         trackingTimeSinceLastCollisionWithPendulum = 0;
         characterJumpedFromPendulum = false;
     }
 	
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
         if(characterRigidBody2D != null && characterIsAttachedToPendulum == true)
         {

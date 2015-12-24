@@ -18,7 +18,7 @@ public class GetCommandToControlPendulum : MonoBehaviour {
         comandoBoxColl2D = comando.GetComponent<BoxCollider2D>();
         comandoSprite = comando.GetComponent<SpriteRenderer>();
         pendulumController = pendulum.GetComponent<DistanceJoint2D>();
-        maximumDistanceBetweenPendulumAndMachine = 3.85f;
+        maximumDistanceBetweenPendulumAndMachine = 6.48f;
         pendulumRigidBody2D = pendulum.GetComponent<Rigidbody2D>();
         pendulumAquired = false;
         tryingToAquirePendulum = false;
