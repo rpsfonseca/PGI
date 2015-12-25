@@ -9,13 +9,14 @@ public class CharacterMov : MonoBehaviour {
 	bool bounce;
 	bool isLadder = false;
 
-
+    public BoxCollider2D ladderCollider;
 	public bool grounded  = false;
 	public Transform groundCheck;
 	public float groundRadious = 0.2f;
 	public LayerMask whatIsGround;
 	public float jumpForce = 0;
 	public Camera camera;
+    private Rigidbody2D thisRigidBody;
 
 
 
@@ -26,21 +27,35 @@ public class CharacterMov : MonoBehaviour {
 	void Start () {
 		Time.timeScale = 1;
 		anim = GetComponent<Animator> ();
+        thisRigidBody = GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 
         grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
-		 
 
-		if (camera.GetComponent<BaseCamera> ().getMapOn () == false) {
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"),
+                                 LayerMask.NameToLayer("OneWayPlatform"),
+                                 !grounded || thisRigidBody.velocity.y > 0 || isLadder
+                                );
+        if (camera.GetComponent<BaseCamera> ().getMapOn () == false) {
 			float move = Input.GetAxis ("Horizontal");
 			anim.SetFloat ("Speed", Mathf.Abs (move));
 			if(isLadder == true){
 				float move2 = Input.GetAxis("Vertical");
-				GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, move2 * maxSpeed); 
-			}
+
+                GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, move2 * maxSpeed / 2); 
+                BoxCollider2D tmpBC = GetComponent<BoxCollider2D>();
+                float characterBottom = tmpBC.bounds.min.y;
+                if(characterBottom > ladderCollider.bounds.max.y)
+                {
+                    if(move2 > 0)
+                    {
+                        GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, 0);
+                    }
+                }
+            }
 			else{
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y); 
 			}

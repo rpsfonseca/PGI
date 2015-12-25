@@ -45,7 +45,7 @@ public class BaseCamera : MonoBehaviour {
 
 	void CameraXFollow() {
 		if (mapOn == false) {
-			Debug.Log("Character: "  + character.transform.position.x + " Min: " + min + " Max : " + max);
+			//Debug.Log("Character: "  + character.transform.position.x + " Min: " + min + " Max : " + max);
 		//	if(character.transform.position.x > min && character.transform.position.x < max){
 			
 			GetComponent<Camera> ().transform.position = new Vector3 (character.transform.position.x, character.transform.position.y + yOffSet, -11);

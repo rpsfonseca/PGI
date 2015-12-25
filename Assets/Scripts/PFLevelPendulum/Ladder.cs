@@ -19,14 +19,16 @@ public class Ladder : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.gameObject.name.Equals ("Character")) {
 			character.GetComponent<CharacterMov> ().setIsLadder (true);
-			Debug.Log ("entrou");
+            character.GetComponent<CharacterMov>().ladderCollider = this.GetComponent<BoxCollider2D>();
+            Debug.Log ("entrou");
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D col) {
 		if (col.gameObject.name.Equals ("Character")) {
 			character.GetComponent<CharacterMov> ().setIsLadder (false);
-			Debug.Log ("saiu");
+            character.GetComponent<CharacterMov>().ladderCollider = this.GetComponent<BoxCollider2D>();
+            Debug.Log ("saiu");
 		}
 	
 	}
