@@ -72,8 +72,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 126206, guid: be37b35736d04499383a4002643f2fbc, type: 2}
-  leftWall: {fileID: 0}
-  rightWall: {fileID: 0}
+  leftWall: {fileID: 161074, guid: 6e9fc50ade41d4c5ea440a38cc94f98b, type: 2}
+  rightWall: {fileID: 168134, guid: 07108a3ff0f0d47b5ac489ddac62c884, type: 2}
 --- !u!212 &21233858
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -111,6 +111,14 @@ Prefab:
       propertyPath: character
       value: 
       objectReference: {fileID: 126206, guid: be37b35736d04499383a4002643f2fbc, type: 2}
+    - target: {fileID: 0}
+      propertyPath: leftWall
+      value: 
+      objectReference: {fileID: 161074, guid: 6e9fc50ade41d4c5ea440a38cc94f98b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: rightWall
+      value: 
+      objectReference: {fileID: 168134, guid: 07108a3ff0f0d47b5ac489ddac62c884, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 176002}
