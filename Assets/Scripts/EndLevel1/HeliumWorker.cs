@@ -29,9 +29,6 @@ public class HeliumWorker : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col) {
 		Debug.Log ("entrou a maquina");
 		Instantiate (balloon);
-		if( col.gameObject.name.Equals("Character")){
-
-		}
 	}
 
 }

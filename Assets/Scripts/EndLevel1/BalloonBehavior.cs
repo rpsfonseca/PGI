@@ -17,6 +17,7 @@ public class BalloonBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		transform.position = spawnPoint.transform.position;
+		GetComponent<Rigidbody2D> ().gravityScale = 0;
 		GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
 		GetComponent<Animator>().SetTrigger("BalloonGrow");
 	}
@@ -34,7 +35,7 @@ public class BalloonBehavior : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D( Collision2D col){
-		if (col.gameObject.name.Equals(character)){
+		if (col.gameObject.name.Equals("Character")){
 			Debug.Log ("Entrou");
 			createJoint();
 			//StartGeneratingEggs();
@@ -60,8 +61,6 @@ public class BalloonBehavior : MonoBehaviour {
 		GetComponent<DistanceJoint2D> ().distance = 0;
 		GetComponent<Rigidbody2D> ().gravityScale = -0.2f;
 		GetComponent<DistanceJoint2D> ().anchor = new Vector2 (0, -2);
-
-
 		isFlying = true;
 
 	}
