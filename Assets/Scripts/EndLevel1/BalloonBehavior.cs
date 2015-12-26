@@ -7,6 +7,7 @@ public class BalloonBehavior : MonoBehaviour {
 	public Lvl3Script script;
 	public GameObject spawnPoint;
 	public Sprite[] balloonColor = new Sprite[6]; 
+	public GameObject HeliumPad;
 
 	
 	bool isFlying = false;
@@ -17,6 +18,7 @@ public class BalloonBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		transform.position = spawnPoint.transform.position;
+		HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (true);
 		GetComponent<Rigidbody2D> ().gravityScale = 0;
 		GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
 		GetComponent<Animator>().SetTrigger("BalloonGrow");
@@ -36,6 +38,7 @@ public class BalloonBehavior : MonoBehaviour {
 
 	void OnCollisionEnter2D( Collision2D col){
 		if (col.gameObject.name.Equals("Character")){
+			HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 			Debug.Log ("Entrou");
 			createJoint();
 			//StartGeneratingEggs();
