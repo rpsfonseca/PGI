@@ -51,7 +51,6 @@ public class BalloonBehavior : MonoBehaviour {
 				Debug.Log ("Entrou no null");
 				if(this.name.Equals("balloons only_0")){
 					GetComponent<SpriteRenderer>().enabled = false;
-					transform.position.x = 2000;
 				   Debug.Log("Certo!");
 				}
 				else
@@ -67,7 +66,6 @@ public class BalloonBehavior : MonoBehaviour {
 					Destroy (this.gameObject);
 				else{
 					GetComponent<SpriteRenderer>().enabled = false;
-					transform.position.x = 2000;
 				}
 			}
 		}
