@@ -7,6 +7,7 @@ public class Lvl3Script : MonoBehaviour {
 
 	public GameObject egg;
 	public GameObject character;
+	public GameObject camera;
 
 	bool characterFlying;
 
@@ -21,6 +22,7 @@ public class Lvl3Script : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		characterFloat ();
+		moveCamera ();
 	}
 	
 
@@ -46,6 +48,14 @@ public class Lvl3Script : MonoBehaviour {
 	void characterFloat(){
 		if(balloonCounter > 0)
 			character.GetComponent<Rigidbody2D>().velocity = (new Vector2(character.GetComponent<Rigidbody2D> ().velocity.x, 0.5f * balloonCounter));
+	}
+
+	void moveCamera(){
+		if (balloonCounter > 0) {
+			camera.GetComponent<Camera>().orthographicSize = 10;
+		} else if(balloonCounter == 0) {
+			camera.GetComponent<Camera>().orthographicSize = 6;
+		}
 	}
 
 	
