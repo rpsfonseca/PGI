@@ -19,7 +19,7 @@ public class EggBehavior : MonoBehaviour {
 		character = GameObject.Find ("Character");
 
 		randomness = rightWall.transform.position.x - leftWall.transform.position.x;
-		transform.position = new Vector3 (rightWall.transform.position.x - ( randomness * Random.value) , character.transform.position.y + 10, transform.position.z);
+		transform.position = new Vector3 (rightWall.transform.position.x - ( randomness * Random.value) , character.transform.position.y + 13, transform.position.z);
 
 	}
 	

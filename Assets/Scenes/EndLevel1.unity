@@ -503,6 +503,14 @@ Prefab:
       propertyPath: m_Name
       value: BalloonPlatform (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 174114, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 143866, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
   m_IsPrefabParent: 0
@@ -787,6 +795,14 @@ Prefab:
       propertyPath: m_Name
       value: BalloonPlatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 174114, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 143866, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
   m_IsPrefabParent: 0
@@ -976,7 +992,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 462946644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3499999, y: 66.8899994, z: 0}
+  m_LocalPosition: {x: 5.19999981, y: 67, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1338,6 +1354,14 @@ Prefab:
       propertyPath: m_Name
       value: BalloonPlatform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 174114, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 143866, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
   m_IsPrefabParent: 0
@@ -1618,6 +1642,14 @@ Prefab:
       propertyPath: HeliumPad
       value: 
       objectReference: {fileID: 1553755912}
+    - target: {fileID: 174114, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 143866, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
   m_IsPrefabParent: 0
@@ -2179,6 +2211,14 @@ Prefab:
     - target: {fileID: 113672, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
       propertyPath: m_Name
       value: BalloonPlatform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 174114, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 143866, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}
+      propertyPath: m_TagString
+      value: Balloon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a32e8c68127cd4b879568ea19e96b01c, type: 2}

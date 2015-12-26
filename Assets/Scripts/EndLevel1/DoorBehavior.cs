@@ -18,7 +18,7 @@ public class DoorBehavior : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if(col.gameObject.name.Equals("Character")){
 			if(key.getColected() == true){
-				Destroy (this);
+				Destroy (this.gameObject);
 			}
 		}
 	}

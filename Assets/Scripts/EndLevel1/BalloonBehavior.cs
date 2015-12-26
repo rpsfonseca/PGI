@@ -47,16 +47,18 @@ public class BalloonBehavior : MonoBehaviour {
 
 
 		} else {
-			if(GetComponent<DistanceJoint2D>() == null){
+			if(GetComponent<DistanceJoint2D>() == null && !col.gameObject.tag.Equals("Balloon")){
 				Debug.Log ("Entrou no null");
 				if(this.name.Equals("balloons only_0")){
 					GetComponent<SpriteRenderer>().enabled = false;
+					HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 				   Debug.Log("Certo!");
 				}
 				else
 					Destroy (this.gameObject);
 			}
 			else{
+				if(!col.gameObject.tag.Equals("Balloon")){
 				Debug.Log ("Entrou no not null");
 				HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 				Destroy (GetComponent<DistanceJoint2D> ());
@@ -67,6 +69,7 @@ public class BalloonBehavior : MonoBehaviour {
 				else{
 					GetComponent<SpriteRenderer>().enabled = false;
 				}
+			}
 			}
 		}
 
