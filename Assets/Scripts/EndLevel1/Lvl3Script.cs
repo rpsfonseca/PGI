@@ -33,7 +33,7 @@ public class Lvl3Script : MonoBehaviour {
 	}
 
 	void StartGeneratingEggs(){
-		InvokeRepeating ("GenerateEgg", 1f, 2f);
+		InvokeRepeating ("GenerateEgg", 1f, 1f);
 	}
 	
 

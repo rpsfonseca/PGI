@@ -5,7 +5,8 @@ public class HeliumWorker : MonoBehaviour {
 
 	public GameObject balloon;
 	public GameObject character;
-	public Sprite[] balloonColor = new Sprite[6]; 
+	public Sprite[] balloonColor = new Sprite[6];
+	bool hasBalloon = true;
 
 	// Use this for initialization
 	void Start () {
@@ -28,10 +29,18 @@ public class HeliumWorker : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) {
 		Debug.Log ("entrou a maquina");
-		if( col.gameObject.name.Equals("Character")){
-			balloon.GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
-			balloon.GetComponent<Animator>().SetTrigger("BalloonGrow");
-		}
+		if(hasBalloon == false)
+			Instantiate (balloon);
 	}
+
+	public void setHasBalloon(bool value){
+		this.hasBalloon = value;
+	}
+
+	public bool getHasBalloon(){
+		return hasBalloon;
+	}
+
+
 
 }
