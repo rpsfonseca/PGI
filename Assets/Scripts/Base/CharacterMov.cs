@@ -34,7 +34,9 @@ public class CharacterMov : MonoBehaviour {
 	void FixedUpdate () {
 
         grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
-
+        anim.SetBool("Ground", grounded);
+        anim.SetFloat("vSpeed", thisRigidBody.velocity.y);
+        Debug.Log(thisRigidBody.velocity.y);
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"),
                                  LayerMask.NameToLayer("OneWayPlatform"),
                                  !grounded || thisRigidBody.velocity.y > 0 || isLadder
@@ -97,6 +99,7 @@ public class CharacterMov : MonoBehaviour {
 	void Jump(){
 		if (grounded == true && Input.GetKeyDown (KeyCode.Space)) {
 			GetComponent<AudioSource> ().Play ();
+            anim.SetBool("Ground", false);
 			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
 		}
 
