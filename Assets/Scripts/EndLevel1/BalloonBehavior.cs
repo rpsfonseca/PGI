@@ -38,7 +38,7 @@ public class BalloonBehavior : MonoBehaviour {
 
 	void OnCollisionEnter2D( Collision2D col){
 		if (col.gameObject.name.Equals("Character")){
-			HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
+
 			Debug.Log ("Entrou");
 			createJoint();
 			//StartGeneratingEggs();
@@ -71,6 +71,7 @@ public class BalloonBehavior : MonoBehaviour {
 	void deleteJoint() {
 		if (Input.GetKeyDown (KeyCode.Space)  && isFlying == true ) {
 			Debug.Log ("Entrou no delete");
+			HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 			Destroy (GetComponent<DistanceJoint2D> ());
 			script.DecreaseBalloonCounter();
 			isFlying = false;
