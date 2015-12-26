@@ -6,6 +6,7 @@ public class BalloonBehavior : MonoBehaviour {
 	public GameObject character;
 	public Lvl3Script script;
 	public GameObject spawnPoint;
+	public Sprite[] balloonColor = new Sprite[6]; 
 
 	
 	bool isFlying = false;
@@ -16,7 +17,7 @@ public class BalloonBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		transform.position = spawnPoint.transform.position;
-//		GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
+		GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
 		GetComponent<Animator>().SetTrigger("BalloonGrow");
 	}
 	

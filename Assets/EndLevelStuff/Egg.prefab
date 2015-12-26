@@ -71,8 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c77672801ae64ad9b1b2c7fd276589e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  script: {fileID: 0}
+  character: {fileID: 126206, guid: be37b35736d04499383a4002643f2fbc, type: 2}
+  leftWall: {fileID: 0}
+  rightWall: {fileID: 0}
 --- !u!212 &21233858
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -105,7 +106,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 126206, guid: be37b35736d04499383a4002643f2fbc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 176002}
