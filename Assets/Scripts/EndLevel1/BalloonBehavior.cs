@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BalloonBehavior : MonoBehaviour {
 
 	public GameObject character;
 	public Lvl3Script script;
+	public GameObject spawnPoint;
 
 	
 	bool isFlying = false;
@@ -14,6 +15,9 @@ public class BalloonBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		transform.position = spawnPoint.transform.position;
+//		GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
+		GetComponent<Animator>().SetTrigger("BalloonGrow");
 	}
 	
 	// Update is called once per frame
@@ -29,7 +33,6 @@ public class BalloonBehavior : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D( Collision2D col){
-
 		if (col.gameObject.name.Equals(character)){
 			Debug.Log ("Entrou");
 			createJoint();

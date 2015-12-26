@@ -28,10 +28,11 @@ public class HeliumWorker : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) {
 		Debug.Log ("entrou a maquina");
-		if( col.gameObject.name.Equals("Character")){
-			balloon.GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
-			balloon.GetComponent<Animator>().SetTrigger("BalloonGrow");
-		}
+		Instantiate (balloon);
+		//if( col.gameObject.name.Equals("Character")){
+		//	balloon.GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
+		//	balloon.GetComponent<Animator>().SetTrigger("BalloonGrow");
+		//}
 	}
 
 }
