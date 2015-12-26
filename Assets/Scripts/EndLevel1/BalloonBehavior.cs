@@ -17,6 +17,7 @@ public class BalloonBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GetComponent<SpriteRenderer> ().enabled = true;
 		transform.position = spawnPoint.transform.position;
 		HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (true);
 		GetComponent<Rigidbody2D> ().gravityScale = 0;
@@ -48,7 +49,13 @@ public class BalloonBehavior : MonoBehaviour {
 		} else {
 			if(GetComponent<DistanceJoint2D>() == null){
 				Debug.Log ("Entrou no null");
-				Destroy (this.gameObject);
+				if(this.name.Equals("balloons only_0")){
+					GetComponent<SpriteRenderer>().enabled = false;
+					transform.position.x = 2000;
+				   Debug.Log("Certo!");
+				}
+				else
+					Destroy (this.gameObject);
 			}
 			else{
 				Debug.Log ("Entrou no not null");
@@ -56,7 +63,12 @@ public class BalloonBehavior : MonoBehaviour {
 				Destroy (GetComponent<DistanceJoint2D> ());
 				script.DecreaseBalloonCounter();
 				isFlying = false;
-				Destroy (this.gameObject);
+				if(!this.name.Equals("balloons only_0"))
+					Destroy (this.gameObject);
+				else{
+					GetComponent<SpriteRenderer>().enabled = false;
+					transform.position.x = 2000;
+				}
 			}
 		}
 
