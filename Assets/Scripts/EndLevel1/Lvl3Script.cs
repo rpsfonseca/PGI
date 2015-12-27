@@ -51,10 +51,12 @@ public class Lvl3Script : MonoBehaviour {
 	}
 
 	void moveCamera(){
-		if (balloonCounter > 0) {
-			camera.GetComponent<Camera>().orthographicSize = 10;
-		} else if(balloonCounter == 0) {
-			camera.GetComponent<Camera>().orthographicSize = 6;
+		if (camera.GetComponent<BaseCamera> ().getMapOn() == false) {
+			if (balloonCounter > 0) {
+				camera.GetComponent<Camera> ().orthographicSize = 10;
+			} else if (balloonCounter == 0) {
+				camera.GetComponent<Camera> ().orthographicSize = 6;
+			}
 		}
 	}
 
