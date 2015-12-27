@@ -1083,7 +1083,12 @@ Prefab:
       propertyPath: yOffSet
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6101784, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6101784, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1179072853
