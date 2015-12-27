@@ -51,7 +51,7 @@ public class BalloonBehavior : MonoBehaviour {
 				Debug.Log ("Entrou no null");
 				if(this.name.Equals("balloons only_0")){
 					GetComponent<SpriteRenderer>().enabled = false;
-					HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
+				//	HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 				   Debug.Log("Certo!");
 				}
 				else
@@ -73,12 +73,12 @@ public class BalloonBehavior : MonoBehaviour {
 			}
 		}
 
-		if (col.gameObject.name.Equals ("egg")) {
-			Debug.Log ("Entrou no delete");
-			Destroy (GetComponent<DistanceJoint2D> ());
-			script.DecreaseBalloonCounter();
+	//	if (col.gameObject.name.Equals ("egg")) {
+	//		Debug.Log ("Entrou no delete");
+	//		Destroy (GetComponent<DistanceJoint2D> ());
+	//		script.DecreaseBalloonCounter();
 			//isFlying = false;
-		}
+	//	}
 	}
 
 
