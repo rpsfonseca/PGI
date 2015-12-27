@@ -19,6 +19,7 @@ public class EndLevelCollider2 : MonoBehaviour {
 	void OnCollisionEnter2D(){
 		if(script.GetComponent<HintMessage2>	().getJumped() == true){
 			PlayerPrefs.SetInt("lvl3",1);
+			PlayerPrefs.SetInt ("lastlevel",2);
 			Application.LoadLevel(7);
 		}
 	}
