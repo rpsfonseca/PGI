@@ -19,3 +19,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
   - enabled: 1
     path: Assets/Scenes/nivel_balance.unity
+  - enabled: 1
+    path: Assets/Scenes/TestRope.unity
+  - enabled: 1
+    path: Assets/Scenes/EndLevel1.unity
+  - enabled: 1
+    path: Assets/Scenes/LearningText.unity

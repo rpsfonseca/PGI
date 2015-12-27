@@ -20,7 +20,8 @@ public class EndLevelCollider1 : MonoBehaviour {
 	void OnCollisionEnter2D(){
 		if(script.GetComponent<HintMessage1> ().getValid()){
 			PlayerPrefs.SetInt("lvl2",1);
-			Application.LoadLevel(levelToLoad);
+			PlayerPrefs.SetInt ("lastlevel",1);
+			Application.LoadLevel(7);
 		}
 	}
 }
