@@ -36,7 +36,7 @@ public class CharacterMov : MonoBehaviour {
         grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
         anim.SetBool("Ground", grounded);
         anim.SetFloat("vSpeed", thisRigidBody.velocity.y);
-        Debug.Log(thisRigidBody.velocity.y);
+        //Debug.Log(thisRigidBody.velocity.y);
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"),
                                  LayerMask.NameToLayer("OneWayPlatform"),
                                  !grounded || thisRigidBody.velocity.y > 0 || isLadder

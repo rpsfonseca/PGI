@@ -28,7 +28,7 @@ public class BalloonBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		deleteJoint ();
-		Debug.Log (character.gameObject.name);
+		//Debug.Log (character.gameObject.name);
 	}
 
 
