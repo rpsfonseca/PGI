@@ -18,7 +18,7 @@ public class EndLevelColliderLvl3 : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.name.Equals ("Character")) {
 			PlayerPrefs.SetInt("lvl4",1);
-			Application.LoadLevel(levelToLoad);
+			Application.LoadLevel(7);
 		}
 	}
 }
