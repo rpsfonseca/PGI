@@ -257,7 +257,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 21202654, guid: 0afee2e8dfb4f4482bb6936d26448500, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dc1dc8518e97bbd4686412d088564596,
+        type: 3}
+    - target: {fileID: 426220, guid: 0afee2e8dfb4f4482bb6936d26448500, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.41999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 426220, guid: 0afee2e8dfb4f4482bb6936d26448500, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .74000001
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9506730, guid: 0afee2e8dfb4f4482bb6936d26448500, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0afee2e8dfb4f4482bb6936d26448500, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &453034295
@@ -364,6 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
+  ladderCollider: {fileID: 0}
   grounded: 0
   groundCheck: {fileID: 1767895800}
   groundRadious: .200000003
@@ -659,8 +674,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 535313172}
   yOffSet: 2
-  firstWall: {fileID: 453034296}
-  LastWall: {fileID: 544944766}
 --- !u!81 &997953858
 AudioListener:
   m_ObjectHideFlags: 0
