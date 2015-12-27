@@ -28,9 +28,11 @@ public class HeliumWorker : MonoBehaviour {
 //	}
 
 	void OnTriggerEnter2D(Collider2D col) {
+		if(!col.gameObject.tag.Equals("Egg")){
 		Debug.Log ("entrou a maquina");
 		if(hasBalloon == false)
 			Instantiate (balloon);
+		}
 	}
 
 	public void setHasBalloon(bool value){

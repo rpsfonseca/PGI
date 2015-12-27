@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Rope
   - Comando
+  - Balloon
+  - Egg
   layers:
   - Default
   - TransparentFX
