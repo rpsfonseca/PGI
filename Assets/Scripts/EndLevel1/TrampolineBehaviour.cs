@@ -19,7 +19,9 @@ public class TrampolineBehaviour : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col)
-    {
+    {	
+		GetComponent<AudioSource> ().time = 0.6f;
+		GetComponent<AudioSource> ().Play ();
         if (col.gameObject.name == "Character")
         {
             anim.SetTrigger("OnTramp");
