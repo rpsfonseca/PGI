@@ -3134,16 +3134,16 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1809593052}
-  - 68: {fileID: 1809593051}
+  - 61: {fileID: 1809593051}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BottomLevelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!68 &1809593051
-EdgeCollider2D:
+--- !u!61 &1809593051
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3153,9 +3153,8 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: -.5, y: 0}
-  - {x: .5, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!4 &1809593052
 Transform:
   m_ObjectHideFlags: 0
@@ -3163,7 +3162,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1809593050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9000001, y: -6.84000015, z: 0}
+  m_LocalPosition: {x: -6.9000001, y: -7.84000015, z: 0}
   m_LocalScale: {x: 20.8700008, y: 1.79999995, z: 1}
   m_Children: []
   m_Father: {fileID: 1988778564}
