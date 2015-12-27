@@ -29,6 +29,7 @@ public class BalloonBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		deleteJoint ();
+		controlPositionTrigger ();
 		//Debug.Log (character.gameObject.name);
 	}
 
@@ -105,6 +106,13 @@ public class BalloonBehavior : MonoBehaviour {
 			script.DecreaseBalloonCounter();
 			isFlying = false;
 		} 
+	}
+
+	void controlPositionTrigger(){
+		if (isTriggered == false) {
+			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeAll;
+		} else
+			GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 	}
 
 
