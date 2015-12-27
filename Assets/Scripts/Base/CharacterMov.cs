@@ -46,13 +46,13 @@ public class CharacterMov : MonoBehaviour {
 			anim.SetFloat ("Speed", Mathf.Abs (move));
 			if(isLadder == true){
 				float move2 = Input.GetAxis("Vertical");
-
+                
                 GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, move2 * maxSpeed / 2); 
                 BoxCollider2D tmpBC = GetComponent<BoxCollider2D>();
                 float characterBottom = tmpBC.bounds.min.y;
-                if(characterBottom > ladderCollider.bounds.max.y)
+                if(characterBottom >= ladderCollider.bounds.max.y)
                 {
-                    if(move2 > 0)
+                    if (move2 > 0)
                     {
                         GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, 0);
                     }

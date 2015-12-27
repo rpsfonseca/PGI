@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 755e5c91049bbee4eb4af5b681008b95
-timeCreated: 1451153960
+guid: 5bafd968f17d8754898ebf69dd71268d
+timeCreated: 1451239598
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -63,100 +63,100 @@ TextureImporter:
     - name: jumpsheet_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 4
-        width: 114
-        height: 103
+        x: 12
+        y: 441
+        width: 58
+        height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: jumpsheet_1
       rect:
         serializedVersion: 2
-        x: 188
-        y: 15
-        width: 99
-        height: 123
+        x: 96
+        y: 446
+        width: 50
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: jumpsheet_2
       rect:
         serializedVersion: 2
-        x: 341
-        y: 23
-        width: 106
-        height: 115
+        x: 175
+        y: 450
+        width: 54
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: jumpsheet_3
       rect:
         serializedVersion: 2
-        x: 498
-        y: 23
-        width: 106
-        height: 115
+        x: 13
+        y: 376
+        width: 54
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: jumpsheet_4
       rect:
         serializedVersion: 2
-        x: 655
-        y: 23
-        width: 106
-        height: 115
+        x: 94
+        y: 376
+        width: 54
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: jumpsheet_5
       rect:
         serializedVersion: 2
-        x: 797
-        y: 23
-        width: 134
-        height: 115
+        x: 167
+        y: 376
+        width: 68
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: jumpsheet_6
       rect:
         serializedVersion: 2
-        x: 944
-        y: 23
-        width: 153
-        height: 115
+        x: 1
+        y: 302
+        width: 77
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: jumpsheet_7
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 23
-        width: 157
-        height: 115
+        x: 81
+        y: 302
+        width: 79
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: jumpsheet_8
       rect:
         serializedVersion: 2
-        x: 1260
-        y: 23
-        width: 146
-        height: 115
+        x: 163
+        y: 302
+        width: 74
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: jumpsheet_9
       rect:
         serializedVersion: 2
-        x: 1428
-        y: 23
-        width: 125
-        height: 123
+        x: 7
+        y: 228
+        width: 63
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -20,6 +20,7 @@ public class Ladder : MonoBehaviour {
 		if (col.gameObject.name.Equals ("Character")) {
 			character.GetComponent<CharacterMov> ().setIsLadder (true);
             character.GetComponent<CharacterMov>().ladderCollider = this.GetComponent<BoxCollider2D>();
+            character.GetComponent<Animator>().SetBool("Climb", true);
             Debug.Log ("entrou");
 		}
 	}
@@ -28,6 +29,7 @@ public class Ladder : MonoBehaviour {
 		if (col.gameObject.name.Equals ("Character")) {
 			character.GetComponent<CharacterMov> ().setIsLadder (false);
             character.GetComponent<CharacterMov>().ladderCollider = this.GetComponent<BoxCollider2D>();
+            character.GetComponent<Animator>().SetBool("Climb", false);
             Debug.Log ("saiu");
 		}
 	

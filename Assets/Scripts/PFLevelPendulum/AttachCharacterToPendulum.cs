@@ -79,6 +79,8 @@ public class AttachCharacterToPendulum : MonoBehaviour {
                         characterIsAttachedToPendulum = false;
                         pendulumCircleColl2D.enabled = false;
                         characterBoxCollider2D.enabled = true;
+                        characterAnimator.SetBool("HoldOn", false);
+                        characterAnimator.SetBool("Ground", false);
                         characterRigidBody2D.mass = 1;
                         characterRigidBody2D.gravityScale = 1;
                     }
@@ -102,6 +104,8 @@ public class AttachCharacterToPendulum : MonoBehaviour {
                     characterIsAttachedToPendulum = false;
                     pendulumCircleColl2D.enabled = false;
                     characterBoxCollider2D.enabled = true;
+                    characterAnimator.SetBool("HoldOn", false);
+                    characterAnimator.SetBool("Ground", false);
                     characterRigidBody2D.mass = 1;
                     characterRigidBody2D.gravityScale = 1;
                 }
@@ -123,6 +127,7 @@ public class AttachCharacterToPendulum : MonoBehaviour {
                 controllerOfPendulum.comandoBoxColl2D.enabled = true;
                 controllerOfPendulum.comandoSprite.enabled = true;
             }
+            characterAnimator.SetFloat("vSpeed", characterRigidBody2D.velocity.y);
         }
 
 
@@ -153,7 +158,8 @@ public class AttachCharacterToPendulum : MonoBehaviour {
                 characterDistanceJoint2D.enabled = true;
                 characterIsAttachedToPendulum = true;
                 characterMovScript.enabled = false;
-                characterAnimator.enabled = false;
+                characterAnimator.SetBool("HoldOn", true);
+                characterAnimator.SetBool("Ground", true);
                 firstTap = false;
                 characterJumpedFromPendulum = false;
             }

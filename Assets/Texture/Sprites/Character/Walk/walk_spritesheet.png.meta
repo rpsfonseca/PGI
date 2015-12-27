@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 0910d1c79d5d78d42a337ca7f03c9dd6
-timeCreated: 1451104015
+guid: 114dfcabf301c4547863399efba3c9f6
+timeCreated: 1451239696
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spreadsheet_0
-    21300002: spreadsheet_1
-    21300004: spreadsheet_2
-    21300006: spreadsheet_3
-    21300008: spreadsheet_4
-    21300010: spreadsheet_5
-    21300012: spreadsheet_6
-    21300014: spreadsheet_7
-    21300016: spreadsheet_8
-    21300018: spreadsheet_9
+    21300000: walk_spritesheet_0
+    21300002: walk_spritesheet_1
+    21300004: walk_spritesheet_2
+    21300006: walk_spritesheet_3
+    21300008: walk_spritesheet_4
+    21300010: walk_spritesheet_5
+    21300012: walk_spritesheet_6
+    21300014: walk_spritesheet_7
+    21300016: walk_spritesheet_8
+    21300018: walk_spritesheet_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -60,103 +60,103 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: spreadsheet_0
+    - name: walk_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 82
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: walk_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 200
+        width: 83
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: walk_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 199
+        width: 84
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: walk_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 81
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: walk_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 140
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: walk_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 140
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: walk_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 81
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: walk_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 81
+        width: 81
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: walk_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 80
+        width: 81
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: walk_spritesheet_9
       rect:
         serializedVersion: 2
         x: 0
         y: 21
-        width: 123
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spreadsheet_1
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 22
-        width: 123
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spreadsheet_2
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 21
-        width: 124
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spreadsheet_3
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 22
-        width: 122
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spreadsheet_4
-      rect:
-        serializedVersion: 2
-        x: 542
-        y: 22
-        width: 122
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spreadsheet_5
-      rect:
-        serializedVersion: 2
-        x: 668
-        y: 22
-        width: 123
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spreadsheet_6
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 22
-        width: 123
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spreadsheet_7
-      rect:
-        serializedVersion: 2
-        x: 935
-        y: 24
-        width: 122
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spreadsheet_8
-      rect:
-        serializedVersion: 2
-        x: 1067
-        y: 23
-        width: 122
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spreadsheet_9
-      rect:
-        serializedVersion: 2
-        x: 1203
-        y: 23
-        width: 122
-        height: 84
+        width: 81
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
