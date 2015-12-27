@@ -20,10 +20,11 @@ public class TrampolineBehaviour : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {	
-		GetComponent<AudioSource> ().time = 0.6f;
-		GetComponent<AudioSource> ().Play ();
+
         if (col.gameObject.name == "Character")
         {
+			GetComponent<AudioSource> ().time = 0.6f;
+			GetComponent<AudioSource> ().Play ();
             anim.SetTrigger("OnTramp");
             anim.SetBool("Ground", false);
             col.rigidbody.AddForce(new Vector2(0, trampolineJumpForce));

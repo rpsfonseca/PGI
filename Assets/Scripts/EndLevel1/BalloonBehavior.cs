@@ -50,17 +50,17 @@ public class BalloonBehavior : MonoBehaviour {
 
 		} else {
 			if(isTriggered == true){
+				GetComponent<AudioSource> ().Play ();
 				if(GetComponent<DistanceJoint2D>() == null && !col.gameObject.tag.Equals("Balloon")){
 					Debug.Log ("Entrou no null");
 					if(this.name.Equals("balloons only_0")){
-						GetComponent<AudioSource> ().Play ();
 						GetComponent<SpriteRenderer>().enabled = false;
 						GetComponent<GameObject>().transform.position = new Vector2(2000,500);
 					//	HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 					   Debug.Log("Certo!");
 					}
 					else{
-						GetComponent<AudioSource> ().Play ();
+	
 						Destroy (this.gameObject);
 					}
 				}
@@ -72,11 +72,9 @@ public class BalloonBehavior : MonoBehaviour {
 						script.DecreaseBalloonCounter();
 						isFlying = false;
 						if(!this.name.Equals("balloons only_0")){
-							GetComponent<AudioSource> ().Play ();
 							Destroy (this.gameObject);
 						}
 						else{
-							GetComponent<AudioSource> ().Play ();
 							GetComponent<SpriteRenderer>().enabled = false;
 						}
 					}
