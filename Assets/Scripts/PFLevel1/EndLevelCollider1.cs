@@ -21,7 +21,7 @@ public class EndLevelCollider1 : MonoBehaviour {
 		if(script.GetComponent<HintMessage1> ().getValid()){
 			PlayerPrefs.SetInt("lvl2",1);
 			PlayerPrefs.SetInt ("lastlevel",1);
-			Application.LoadLevel(7);
+			Application.LoadLevel(2);
 		}
 	}
 }

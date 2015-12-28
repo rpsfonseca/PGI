@@ -20,7 +20,7 @@ public class EndLevelCollider2 : MonoBehaviour {
 		if(script.GetComponent<HintMessage2>	().getJumped() == true){
 			PlayerPrefs.SetInt("lvl3",1);
 			PlayerPrefs.SetInt ("lastlevel",2);
-			Application.LoadLevel(7);
+			Application.LoadLevel(3);
 		}
 	}
 }
