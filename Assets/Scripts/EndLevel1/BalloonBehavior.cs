@@ -57,7 +57,7 @@ public class BalloonBehavior : MonoBehaviour {
 					Debug.Log ("Entrou no null");
 					if(this.name.Equals("balloons only_0")){
 						GetComponent<SpriteRenderer>().enabled = false;
-						//GetComponent<GameObject>().transform.position = new Vector2(2000,500);
+						this.transform.position = new Vector2(2000,500);
 
 					//	HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 					   Debug.Log("Certo!");
@@ -84,7 +84,7 @@ public class BalloonBehavior : MonoBehaviour {
 						}
 						else{
 							GetComponent<SpriteRenderer>().enabled = false;
-							GetComponent<GameObject>().transform.position = new Vector2(2000,500);
+							this.transform.position = new Vector2(2000,500);
 						}
 					}
 				}
