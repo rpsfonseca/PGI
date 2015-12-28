@@ -26,7 +26,7 @@ public class EggBehavior : MonoBehaviour {
 		randomness = rightWall.transform.position.x - leftWall.transform.position.x;
 		transform.position = new Vector3 (rightWall.transform.position.x - ( randomness * Random.value) , character.transform.position.y + 13, transform.position.z);
 		if (transform.position.x < leftWall.transform.position.x)
-			transform.position = new Vector3 (leftWall.transform.position.x + 1.3, transform.position.y, transform.position.z);
+			transform.position = new Vector3 (leftWall.transform.position.x + 1.3f, transform.position.y, transform.position.z);
 
 	}
 	
