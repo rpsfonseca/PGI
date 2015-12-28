@@ -110,6 +110,7 @@ public class CharacterMov : MonoBehaviour {
 	 
 	void Jump(){
 		if (grounded == true && Input.GetKeyDown (KeyCode.Space)) {
+			GetComponent<AudioSource> ().pitch = (Random.Range (0.1f, 1.7f));
 			GetComponent<AudioSource> ().Play ();
             anim.SetBool("Ground", false);
 			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));

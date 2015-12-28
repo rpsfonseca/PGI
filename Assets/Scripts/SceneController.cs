@@ -25,6 +25,8 @@ public class SceneController : MonoBehaviour {
 	}
 
     public void ChangeInfo(int lvl) {
+
+
         /*if (lvl == 1) {
             infoText.text = "Use A to move to the left and D \nto move to the right!";
         }
