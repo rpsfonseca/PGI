@@ -177,7 +177,7 @@ GameObject:
   - 4: {fileID: 62164645}
   - 212: {fileID: 62164647}
   - 61: {fileID: 62164646}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ GameObject:
   - 4: {fileID: 1679396789}
   - 212: {fileID: 1679396791}
   - 61: {fileID: 1679396790}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +773,7 @@ MonoBehaviour:
   groundRadious: .200000003
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4294966783
+    m_Bits: 4294954495
   jumpForce: 300
   camera: {fileID: 1808861597}
 --- !u!61 &1738661255
