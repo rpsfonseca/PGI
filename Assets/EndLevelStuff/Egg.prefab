@@ -12,6 +12,7 @@ GameObject:
   - 58: {fileID: 5823054}
   - 50: {fileID: 5080744}
   - 114: {fileID: 11468854}
+  - 95: {fileID: 9571616}
   m_Layer: 12
   m_Name: Egg
   m_TagString: Egg
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.01024723, y: 23.1392841, z: -3.25}
+  m_LocalPosition: {x: .769999981, y: 4.23999977, z: -3.25}
   m_LocalScale: {x: .400000006, y: .400000006, z: .819999993}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,6 +61,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .550000012
+--- !u!95 &9571616
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176002}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3b917992081e5a8488214d40c617da84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11468854
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 876dd9f5298894578b5333665b55e99b
-timeCreated: 1451319660
+guid: fde9824d20526644093c1b938d3738cd
+timeCreated: 1451316578
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: eggs_0
-    21300002: eggs_1
-    21300004: eggs_2
-    21300006: eggs_3
-    21300008: eggs_4
-    21300010: eggs_5
-    21300012: eggs_6
-    21300014: eggs_7
-    21300016: eggs_8
-    21300018: eggs_9
+    21300000: hold_balloon_spritesheet_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -60,45 +51,15 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: eggs_0
+    - name: hold_balloon_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 253
-        width: 120
-        height: 156
+        x: 0
+        y: 55
+        width: 36
+        height: 73
       alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eggs_1
-      rect:
-        serializedVersion: 2
-        x: 245
-        y: 152
-        width: 254
-        height: 248
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eggs_2
-      rect:
-        serializedVersion: 2
-        x: 521
-        y: 115
-        width: 260
-        height: 201
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eggs_3
-      rect:
-        serializedVersion: 2
-        x: 821
-        y: 108
-        width: 168
-        height: 129
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

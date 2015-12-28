@@ -13,9 +13,12 @@ public class DeathByFall : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter2D(Collision2D col){
+	void OnTriggerEnter2D(Collider2D col){
+        Debug.Log("aiai");
 		if (col.gameObject.name.Equals ("Character")) {
-			Application.LoadLevel(Application.loadedLevel);
-		}
+            col.gameObject.GetComponent<CharacterMov>().setDead();
+            col.gameObject.GetComponent<CharacterMov>().setDeadByFall();
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
 	}
 }

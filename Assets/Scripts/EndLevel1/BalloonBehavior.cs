@@ -47,6 +47,7 @@ public class BalloonBehavior : MonoBehaviour {
 			createJoint ();
 			//StartGeneratingEggs();
 			script.IncreaseBalloonCounter ();
+            character.GetComponent<Animator>().SetBool("HoldingBallon", true);
 
 
 		} else {
@@ -56,7 +57,7 @@ public class BalloonBehavior : MonoBehaviour {
 					Debug.Log ("Entrou no null");
 					if(this.name.Equals("balloons only_0")){
 						GetComponent<SpriteRenderer>().enabled = false;
-						//GetComponent<GameObject>().transform.position = new Vector2(2000,500);
+						this.transform.position = new Vector2(2000,500);
 
 					//	HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 					   Debug.Log("Certo!");
@@ -66,8 +67,14 @@ public class BalloonBehavior : MonoBehaviour {
 					}
 				}
 				else{
-					if(!col.gameObject.tag.Equals("Balloon")){
+                    if (isFlying)
+                    {
+                        character.GetComponent<Animator>().SetBool("HoldingBallon", false);
+                    }
+
+                    if (!col.gameObject.tag.Equals("Balloon")){
 						Debug.Log ("Entrou no not null");
+                        
 						HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 						Destroy (GetComponent<DistanceJoint2D> ());
 						script.DecreaseBalloonCounter();
@@ -77,7 +84,7 @@ public class BalloonBehavior : MonoBehaviour {
 						}
 						else{
 							GetComponent<SpriteRenderer>().enabled = false;
-							GetComponent<GameObject>().transform.position = new Vector2(2000,500);
+							this.transform.position = new Vector2(2000,500);
 						}
 					}
 				}
@@ -94,8 +101,6 @@ public class BalloonBehavior : MonoBehaviour {
 
 
 	void createJoint() {
-
-
 		gameObject.AddComponent<DistanceJoint2D> ();
 		GetComponent<DistanceJoint2D> ().connectedBody = character.GetComponent<Rigidbody2D> ();
 		GetComponent<DistanceJoint2D> ().distance = 0;
@@ -107,11 +112,13 @@ public class BalloonBehavior : MonoBehaviour {
 
 	void deleteJoint() {
 		if (Input.GetKeyDown (KeyCode.Space)  && isFlying == true ) {
-			Debug.Log ("Entrou no delete");
+            character.GetComponent<Animator>().SetBool("HoldingBallon", false);
+            Debug.Log ("Entrou no delete");
 			HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 			Destroy (GetComponent<DistanceJoint2D> ());
 			script.DecreaseBalloonCounter();
 			isFlying = false;
+
 		} 
 	}
 

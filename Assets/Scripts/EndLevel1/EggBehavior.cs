@@ -7,7 +7,7 @@ public class EggBehavior : MonoBehaviour {
 	public GameObject leftWall;
 	public GameObject rightWall;
 	public GameObject balloon;
-
+    private Animator anim;
 
 	
 	float randomness;
@@ -16,25 +16,26 @@ public class EggBehavior : MonoBehaviour {
 	// Use this for initialization
 	
 	void Start () {
-		character = GameObject.Find ("Character");
+        anim = GetComponent<Animator>();
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Egg"),
+                                       LayerMask.NameToLayer("GreenPlatform"),
+                                       true
+                                       );
+        character = GameObject.Find ("Character");
 
 		randomness = rightWall.transform.position.x - leftWall.transform.position.x;
 		transform.position = new Vector3 (rightWall.transform.position.x - ( randomness * Random.value) , character.transform.position.y + 13, transform.position.z);
+		if (transform.position.x < leftWall.transform.position.x)
+			transform.position = new Vector3 (leftWall.transform.position.x + 1.3f, transform.position.y, transform.position.z);
 
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Egg"),
-		                               LayerMask.NameToLayer("GreenPlatform"),
-		                               true
-		                               );
-	}
+	
 
 	void OnCollisionEnter2D( Collision2D col){
-		if (!this.name.Equals ("Egg")) {
-			Destroy(this.gameObject);
-		}else if(col.gameObject.Equals(balloon)){
+		if (!col.gameObject.name.Equals ("Egg")) {
+            anim.SetTrigger("Explode");
+            StartCoroutine(DestroyEgg());
 		}
 
 		//if (col.gameObject.name.Equals ("Character")) {
@@ -43,4 +44,10 @@ public class EggBehavior : MonoBehaviour {
 		//	Destroy(this.gameObject);
 		//}
 	}
+
+    private IEnumerator DestroyEgg()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(this.gameObject);
+    }
 }
