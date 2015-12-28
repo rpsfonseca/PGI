@@ -17,7 +17,8 @@ public class CharacterMov : MonoBehaviour {
 	public float jumpForce = 0;
 	public Camera camera;
     private Rigidbody2D thisRigidBody;
-
+    private bool dead;
+    private bool startedAnim;
 
 
 	Vector2 normalGrav;
@@ -28,11 +29,22 @@ public class CharacterMov : MonoBehaviour {
 		Time.timeScale = 1;
 		anim = GetComponent<Animator> ();
         thisRigidBody = GetComponent<Rigidbody2D>();
+        dead = false;
+        startedAnim = false;
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
+        if (dead)
+        {
+            if (!startedAnim)
+            {
+                startedAnim = true;
+                anim.Play("Dead");
+                StartCoroutine(LoadLevel());
+            }
+            return;
+        }
         grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
         anim.SetBool("Ground", grounded);
         anim.SetFloat("vSpeed", thisRigidBody.velocity.y);
@@ -137,5 +149,21 @@ public class CharacterMov : MonoBehaviour {
 		}
 	}
 
+    private IEnumerator LoadLevel()
+    {
+        if (facingRight)
+        {
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
+        yield return new WaitForSeconds(1);
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void setDead()
+    {
+        dead = true;
+    }
 
 }
