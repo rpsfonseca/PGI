@@ -12,7 +12,7 @@ public class GenerateBalloons : MonoBehaviour {
 	void Start () {
         working = true;
 		//StartGeneratingEggs ();
-        timeBetweenLaunches = 1;
+        timeBetweenLaunches = 0.5f;
         timePassedAfterLaunch = 0;
 	}
 	

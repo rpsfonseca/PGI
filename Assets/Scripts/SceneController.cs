@@ -21,7 +21,7 @@ public class SceneController : MonoBehaviour {
 	public void ButtonDoAction(){
 		if (levelToLoad == 7)
 			Application.LoadLevel (0);
-		Application.LoadLevel (levelToLoad);
+		Application.LoadLevel (levelToLoad + 1);
 	}
 
     public void ChangeInfo(int lvl) {
