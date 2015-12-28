@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 876dd9f5298894578b5333665b55e99b
-timeCreated: 1451244812
+timeCreated: 1451319660
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -63,102 +63,42 @@ TextureImporter:
     - name: eggs_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 257
-        width: 111
-        height: 152
+        x: 43
+        y: 253
+        width: 120
+        height: 156
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: eggs_1
       rect:
         serializedVersion: 2
-        x: 259
-        y: 321
-        width: 89
-        height: 52
+        x: 245
+        y: 152
+        width: 254
+        height: 248
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: eggs_2
       rect:
         serializedVersion: 2
-        x: 410
-        y: 291
-        width: 73
-        height: 71
+        x: 521
+        y: 115
+        width: 260
+        height: 201
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: eggs_3
       rect:
         serializedVersion: 2
-        x: 264
-        y: 161
-        width: 79
-        height: 109
+        x: 821
+        y: 108
+        width: 168
+        height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eggs_4
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 241
-        width: 73
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eggs_5
-      rect:
-        serializedVersion: 2
-        x: 405
-        y: 201
-        width: 78
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eggs_6
-      rect:
-        serializedVersion: 2
-        x: 522
-        y: 166
-        width: 60
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eggs_7
-      rect:
-        serializedVersion: 2
-        x: 594
-        y: 136
-        width: 184
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eggs_8
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 136
-        width: 60
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: eggs_9
-      rect:
-        serializedVersion: 2
-        x: 902
-        y: 141
-        width: 74
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
