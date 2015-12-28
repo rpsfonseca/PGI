@@ -25,15 +25,12 @@ public class EggBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("Character position in egg: " + character.transform.position.y);
 	}
 
 	void OnCollisionEnter2D( Collision2D col){
-		Debug.Log ("Entrou no collider");
 		if (!this.name.Equals ("Egg")) {
 			Destroy(this.gameObject);
 		}else if(col.gameObject.Equals(balloon)){
-			Debug.Log ("BAteu num balao");
 		}
 
 		//if (col.gameObject.name.Equals ("Character")) {

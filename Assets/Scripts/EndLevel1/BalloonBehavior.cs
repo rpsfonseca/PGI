@@ -24,6 +24,7 @@ public class BalloonBehavior : MonoBehaviour {
 		GetComponent<Rigidbody2D> ().gravityScale = 0;
 		GetComponent<SpriteRenderer>().sprite = balloonColor[Random.Range(0,5)];
 		GetComponent<Animator>().SetTrigger("BalloonGrow");
+		isTriggered = false;
 	}
 	
 	// Update is called once per frame
@@ -40,7 +41,7 @@ public class BalloonBehavior : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D( Collision2D col){
-		if (col.gameObject.name.Equals ("Character")) {
+		if (col.gameObject.name.Equals ("Character") && isTriggered == false) {
 
 			Debug.Log ("Entrou");
 			createJoint ();
@@ -50,15 +51,19 @@ public class BalloonBehavior : MonoBehaviour {
 
 		} else {
 			if(isTriggered == true){
+				GetComponent<AudioSource> ().Play ();
 				if(GetComponent<DistanceJoint2D>() == null && !col.gameObject.tag.Equals("Balloon")){
 					Debug.Log ("Entrou no null");
 					if(this.name.Equals("balloons only_0")){
 						GetComponent<SpriteRenderer>().enabled = false;
+						GetComponent<GameObject>().transform.position = new Vector2(2000,500);
+
 					//	HeliumPad.GetComponent<HeliumWorker> ().setHasBalloon (false);
 					   Debug.Log("Certo!");
 					}
-					else
+					else{
 						Destroy (this.gameObject);
+					}
 				}
 				else{
 					if(!col.gameObject.tag.Equals("Balloon")){
@@ -67,10 +72,12 @@ public class BalloonBehavior : MonoBehaviour {
 						Destroy (GetComponent<DistanceJoint2D> ());
 						script.DecreaseBalloonCounter();
 						isFlying = false;
-						if(!this.name.Equals("balloons only_0"))
+						if(!this.name.Equals("balloons only_0")){
 							Destroy (this.gameObject);
+						}
 						else{
 							GetComponent<SpriteRenderer>().enabled = false;
+							GetComponent<GameObject>().transform.position = new Vector2(2000,500);
 						}
 					}
 				}

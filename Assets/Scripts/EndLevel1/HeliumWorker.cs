@@ -30,8 +30,10 @@ public class HeliumWorker : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col) {
 		if(!col.gameObject.tag.Equals("Egg")){
 		Debug.Log ("entrou a maquina");
-		if(hasBalloon == false)
+		if(hasBalloon == false){
+			GetComponent<AudioSource> ().Play ();
 			Instantiate (balloon);
+			}
 		}
 	}
 
