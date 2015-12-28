@@ -11,8 +11,8 @@ public class BaseCamera : MonoBehaviour {
 	//public Transform firstWall;
 	//public Transform LastWall;
 
-	float max;
-	float min;
+	//float max;
+	//float min;
 
 	// Use this for initialization
 	void Start () {
@@ -48,10 +48,10 @@ public class BaseCamera : MonoBehaviour {
 		//	if(character.transform.position.x > min && character.transform.position.x < max){
 			
 			GetComponent<Camera> ().transform.position = new Vector3 (character.transform.position.x, character.transform.position.y + yOffSet, -11);
-		//	}
-		//	else{
-		//		GetComponent<Camera> ().transform.position = new Vector3 (GetComponent<Camera>().transform.position.x, character.transform.position.y + yOffSet, -11);
-		//	}
+	//		}
+	//		else{
+	//			GetComponent<Camera> ().transform.position = new Vector3 (GetComponent<Camera>().transform.position.x, character.transform.position.y + yOffSet, -11);
+	//		}
 		}
 	}
 
