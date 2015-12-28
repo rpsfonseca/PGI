@@ -29,7 +29,7 @@ GameObject:
   - 82: {fileID: 8260794}
   m_Layer: 0
   m_Name: balloons
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 435454}
   - 212: {fileID: 21273840}
   - 61: {fileID: 6163684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: platform_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - 82: {fileID: 8268134}
   m_Layer: 0
   m_Name: balloons only_0
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.247492075, y: 14.8915234, z: .14453125}
+  m_LocalPosition: {x: -.247492075, y: 14.4899998, z: .14453125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 435454}
@@ -488,9 +488,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 1.38978934, y: -.199634433}
+  m_Offset: {x: 1.38978958, y: -.235940471}
   serializedVersion: 2
-  m_Size: {x: 7.66000032, y: 1.51000011}
+  m_Size: {x: 7.66000032, y: 1.43738496}
 --- !u!82 &8260794
 AudioSource:
   m_ObjectHideFlags: 1
@@ -679,8 +679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc45d8d75389a45329c8064199da7ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 126206, guid: be37b35736d04499383a4002643f2fbc, type: 2}
-  script: {fileID: 11478376, guid: ba1e4403cdb7e46e0a989054aec33642, type: 2}
+  character: {fileID: 0}
+  script: {fileID: 0}
   spawnPoint: {fileID: 184946}
   balloonColor:
   - {fileID: 21300000, guid: 053827ec1cba644c0882ad1913380cf4, type: 3}
@@ -689,7 +689,7 @@ MonoBehaviour:
   - {fileID: 21300006, guid: 053827ec1cba644c0882ad1913380cf4, type: 3}
   - {fileID: 21300008, guid: 053827ec1cba644c0882ad1913380cf4, type: 3}
   - {fileID: 21300010, guid: 053827ec1cba644c0882ad1913380cf4, type: 3}
-  HeliumPad: {fileID: 0}
+  HeliumPad: {fileID: 143866}
   isTriggered: 0
   egg: {fileID: 176002, guid: 2e04d2a6918f74057b920e3c255ca21d, type: 2}
 --- !u!212 &21260668
@@ -826,6 +826,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: Loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

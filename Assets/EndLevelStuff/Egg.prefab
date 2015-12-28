@@ -12,7 +12,7 @@ GameObject:
   - 58: {fileID: 5823054}
   - 50: {fileID: 5080744}
   - 114: {fileID: 11468854}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Egg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -139,6 +139,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
       value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

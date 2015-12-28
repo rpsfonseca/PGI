@@ -45,9 +45,13 @@ public class Lvl3Script : MonoBehaviour {
 		}
 	}
 
+	public int getBalloonCounter(){
+		return balloonCounter;
+	}
+
 	void characterFloat(){
 		if(balloonCounter > 0)
-			character.GetComponent<Rigidbody2D>().velocity = (new Vector2(character.GetComponent<Rigidbody2D> ().velocity.x, 0.5f * balloonCounter));
+			character.GetComponent<Rigidbody2D>().velocity = (new Vector2(character.GetComponent<Rigidbody2D> ().velocity.x, 1f * balloonCounter));
 	}
 
 	void moveCamera(){

@@ -25,6 +25,10 @@ public class EggBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Egg"),
+		                               LayerMask.NameToLayer("GreenPlatform"),
+		                               true
+		                               );
 	}
 
 	void OnCollisionEnter2D( Collision2D col){
