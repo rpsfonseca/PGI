@@ -19,6 +19,7 @@ public class CharacterMov : MonoBehaviour {
     private Rigidbody2D thisRigidBody;
     private bool dead;
     private bool startedAnim;
+    private bool deadByFall;
 
 
 	Vector2 normalGrav;
@@ -26,6 +27,7 @@ public class CharacterMov : MonoBehaviour {
 	Animator anim;
 	
 	void Start () {
+        deadByFall = false;
 		Time.timeScale = 1;
 		anim = GetComponent<Animator> ();
         thisRigidBody = GetComponent<Rigidbody2D>();
@@ -40,7 +42,14 @@ public class CharacterMov : MonoBehaviour {
             if (!startedAnim)
             {
                 startedAnim = true;
-                anim.Play("Dead");
+                anim.SetBool("Ground", true);
+                anim.SetTrigger("Dead");
+                //anim.Play("Dead");
+                if (deadByFall)
+                {
+                    StartCoroutine(LoadLevelAfterDeadByFall());
+                    return;
+                }
                 StartCoroutine(LoadLevel());
             }
             return;
@@ -162,9 +171,20 @@ public class CharacterMov : MonoBehaviour {
         Application.LoadLevel(Application.loadedLevel);
     }
 
+    private IEnumerator LoadLevelAfterDeadByFall()
+    {
+        yield return new WaitForSeconds(1);
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
     public void setDead()
     {
         dead = true;
+    }
+
+    public void setDeadByFall()
+    {
+        deadByFall = true;
     }
 
 }
