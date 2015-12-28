@@ -19,7 +19,7 @@ public class EndLevelColliderLvl3 : MonoBehaviour {
 		if (col.gameObject.name.Equals ("Character")) {
 			PlayerPrefs.SetInt("lvl4",1);
 			PlayerPrefs.SetInt ("lastlevel",3);
-			Application.LoadLevel(7);
+			Application.LoadLevel(4);
 		}
 	}
 }
