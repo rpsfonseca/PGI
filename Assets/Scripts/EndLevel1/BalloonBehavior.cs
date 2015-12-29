@@ -40,7 +40,7 @@ public class BalloonBehavior : MonoBehaviour {
 		isFlying = value;
 	}
 
-	void OnCollisionEnter2D( Collision2D col){
+	void OnTriggerEnter2D( Collider2D col){
 		if (col.gameObject.name.Equals ("Character") && isTriggered == false && script.getBalloonCounter() == 0) {
 
 			Debug.Log ("Entrou");

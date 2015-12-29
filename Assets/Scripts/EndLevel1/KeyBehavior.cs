@@ -19,12 +19,11 @@ public class KeyBehavior : MonoBehaviour {
 		return colected;
 	}
 
-	void OnCollisionEnter2D(Collision2D col){
+	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.name.Equals("Character")){
 			Debug.Log ("Passou chave");
 			colected = true;
 			GetComponent<SpriteRenderer>().enabled = false;
-
 		}
 	}
 }
