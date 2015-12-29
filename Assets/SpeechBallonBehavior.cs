@@ -14,7 +14,7 @@ public class SpeechBallonBehavior : MonoBehaviour {
         transform.localPosition = characterTransform.localPosition + new Vector3(1.5f,1,0);
         movedLeft = false;
         movedRight = false;
-        arrowEnd.SetActive(true);
+        arrowEnd.SetActive(false);
     }
 	
 	void Update () {
@@ -34,7 +34,16 @@ public class SpeechBallonBehavior : MonoBehaviour {
                 arrowEnd.SetActive(true);
             }
         }
-        
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                movedRight = true;
+                movedLeft = true;
+                arrowEnd.SetActive(true);
+                Destroy(gameObject);
+            }
+        }
     }
 
     public bool getFinished()
