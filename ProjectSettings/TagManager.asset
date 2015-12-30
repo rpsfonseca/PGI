@@ -9,6 +9,7 @@ TagManager:
   - Balloon
   - Egg
   - LevelsChoose
+  - WaterBallon
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - GreenPlatform
   - Egg
   - OutOfLevel
-  - 
+  - Isn'tGround
   - 
   - 
   - 
