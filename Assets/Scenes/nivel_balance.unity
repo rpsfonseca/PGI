@@ -338,8 +338,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0.00000067444626, y: -0.20348145}
-  m_ConnectedAnchor: {x: -0.00000033994183, y: 0.61455315}
+  m_Anchor: {x: -0.07, y: -0.19121067}
+  m_ConnectedAnchor: {x: -0.03, y: 0.6145524}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -416,7 +416,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 260231121}
   m_LocalRotation: {x: 0, y: 0, z: 0.17364822, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: -0.284, z: 0}
+  m_LocalPosition: {x: -0.02, y: -0.284, z: 0}
   m_LocalScale: {x: 0.3182184, y: 0.30686408, z: 0.3182184}
   m_Children: []
   m_Father: {fileID: 1801344949}
@@ -1307,7 +1307,7 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 180790, guid: 60b1af7e7e7c3471ca00dbc5a4e2acf9, type: 2}
   m_PrefabInternal: {fileID: 1133481232}
---- !u!114 &943408774
+--- !u!114 &943408772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1315,9 +1315,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 943408770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317236fc3b0d74f4ea1d367f79868dc1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8283bca29fe124d46a724698001e53b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  script: {fileID: 0}
+  levelToLoad: 0
 --- !u!1 &961533274
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,7 +33,10 @@ public class CrateScript : MonoBehaviour {
         {
             GetComponent<Rigidbody2D>().isKinematic = true;
         }
-        
+        else if(col.gameObject.tag == "BalanceNew")
+        {
+            hitOnTopPlatform = false;
+        }
 	}
 
 	void turnKinematic(){
