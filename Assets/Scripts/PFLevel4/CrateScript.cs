@@ -17,8 +17,8 @@ public class CrateScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
-		if(col.gameObject.Equals(balloon)){
-			this.GetComponent<Rigidbody2D>().isKinematic = true;
+        if (col.gameObject.tag == "WaterBallon"){
+            this.GetComponent<Rigidbody2D>().isKinematic = true;
 		}
 	}
 

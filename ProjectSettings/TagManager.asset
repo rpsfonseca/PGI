@@ -9,6 +9,7 @@ TagManager:
   - Balloon
   - Egg
   - LevelsChoose
+  - WaterBallon
   layers:
   - Default
   - TransparentFX

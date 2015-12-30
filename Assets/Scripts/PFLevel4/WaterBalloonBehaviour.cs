@@ -14,6 +14,7 @@ public class WaterBalloonBehaviour : MonoBehaviour {
         anim = GetComponent<Animator>();
         exploded = false;
         ballonRB2D = GetComponent<Rigidbody2D>();
+        gameObject.name = "ballon";
     }
 
 
