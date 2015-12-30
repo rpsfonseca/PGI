@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EndLevelCollider : MonoBehaviour {
-	
+public class EndLevelColliderLvl4 : MonoBehaviour {
+
+	public SpeechBallonBehavior script;
+	//LevelMenuScript lvlMenuScripts;
 	public int levelToLoad = 0;
+	bool isCompleted = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +21,7 @@ public class EndLevelCollider : MonoBehaviour {
 		if(col.gameObject.name.Equals("Character")){
 			PlayerPrefs.SetInt("lvl5",1);
 			PlayerPrefs.SetInt ("lastlevel",4);
-			Application.LoadLevel(5);
+			Application.LoadLevel(7);
 		}
 	}
 }

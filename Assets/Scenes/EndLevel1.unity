@@ -1415,7 +1415,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 480550, guid: be37b35736d04499383a4002643f2fbc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.649999976
+      value: .639999986
       objectReference: {fileID: 0}
     - target: {fileID: 480550, guid: be37b35736d04499383a4002643f2fbc, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2838,7 +2838,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8654b24d940945688b02c182d615bb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1445641130
@@ -3413,6 +3413,23 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 456724, guid: 07108a3ff0f0d47b5ac489ddac62c884, type: 2}
   m_PrefabInternal: {fileID: 1939774556}
+--- !u!1 &1982033869 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 168134, guid: 07108a3ff0f0d47b5ac489ddac62c884, type: 2}
+  m_PrefabInternal: {fileID: 1939774556}
+--- !u!114 &1982033870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1982033869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14028cc9695ce4514a459a27df44bb31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 0}
+  levelToLoad: 0
 --- !u!4 &1993888059 stripped
 Transform:
   m_PrefabParentObject: {fileID: 456724, guid: 07108a3ff0f0d47b5ac489ddac62c884, type: 2}
