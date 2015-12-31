@@ -9,7 +9,7 @@ public class TrampolineBehaviour : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        trampolineJumpForce = 1200;
+        trampolineJumpForce = 900;
     }
 
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class TrampolineBehaviour : MonoBehaviour
 			GetComponent<AudioSource> ().Play ();
             anim.SetTrigger("OnTramp");
             col.gameObject.GetComponent<Animator>().SetBool("Ground", false);
+            col.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, trampolineJumpForce));
         }
     }
