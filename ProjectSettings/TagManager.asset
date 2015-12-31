@@ -10,6 +10,7 @@ TagManager:
   - Egg
   - LevelsChoose
   - WaterBallon
+  - StopBoxCollider
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - Egg
   - OutOfLevel
   - Isn'tGround
-  - 
-  - 
+  - Ballon
+  - WallForBox
   - 
   - 
   - 
