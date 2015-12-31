@@ -355,7 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: 950
+  m_MinHeight: 680
   m_PreferredWidth: 391
   m_PreferredHeight: -1
   m_FlexibleWidth: 1
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -390,47 +390,32 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Helium balloons work by the same law of buoyancy. In this case, the helium
-    balloon that you hold by a string is floating in a \"pool\" of air (when you stand
-    underwater at the bottom of a swimming pool, you are standing in a \"pool of water\"
-    maybe 10 feet deep -- when you stand in an open field you are standing at the
-    bottom of a \"pool of air\" that is many miles deep). The helium balloon displaces
-    an amount of air (just like the empty bottle displaces an amount of water). As
-    long as the helium plus the balloon is lighter than the air it displaces, the
-    balloon will float in the air.\r\nIt turns out that helium is a lot lighter than
-    air. The difference is not as great as it is between water and air (a liter of
-    water weighs about 1,000 grams, while a liter of air weighs about 1 gram), but
-    it is significant. Helium weighs 0.1785 grams per liter. Nitrogen weighs 1.2506
-    grams per liter, and since nitrogen makes up about 80 percent of the air we breathe,
-    1.25 grams is a good approximation for the weight of a liter of air.\r\nTherefore,
-    if you were to fill a 1-liter soda bottle full of helium, the bottle would weigh
-    about 1 gram less than the same bottle filled with air. That doesn't sound like
-    much -- the bottle itself weighs more than a gram, so it won't float. However,
-    in large volumes, the 1-gram-per-liter difference between air and helium can really
-    add up. This explains why blimps and balloons are generally quite large -- they
-    have to displace a lot of air to float.\nA 100-foot-diameter balloon can lift
-    33,000 pounds! Here is how you can figure out the lifting capacity of the helium
-    in a spherical helium balloon:\r\n1\tDetermine the volume of the balloon. The
-    volume of a sphere is 4/3 * pi * r3, where r is the radius of the balloon. So
-    first determine the radius of the sphere (the radius is half the diameter). Cube
-    the radius (multiply it by itself twice: r*r*r), multiply by 4/3 and then multiply
-    by Pi. If you are measuring your balloon in feet, that gives you the volume of
-    the balloon in cubic feet.\r\n2\tOne cubic foot of helium will lift about 28.2
-    grams, so multiply the volume of the balloon by 28.2.\r\n3\tDivide by 448 -- the
-    number of grams in a pound -- to determine the number of pounds it can lift.\r\nSo,
-    for example, a 20-foot balloon has a radius of 10 feet. 10* 10 * 10 * 3.14 * 4/3
-    = 4,186 cubic feet of volume. 4,186 cubic feet * 28.2 grams/cubic feet = 118,064
-    grams. 118,064 grams / 448 grams per pound = 263 pounds of lifting force.\r\nAlthough
-    not used much anymore, hydrogen balloons were once quite popular. Hydrogen weighs
-    just 0.08988 grams per liter. However, it is highly flammable, so the slightest
-    spark can cause a huge explosion.\r\nSo why are helium and hydrogen so much lighter
-    than air? It's because the hydrogen and helium atoms are lighter than a nitrogen
-    atom. They have fewer electrons, protons and neutrons than nitrogen atoms do,
-    and that makes them lighter (the approximate atomic weight of hydrogen is 1, helium
-    is 4 and nitrogen is 14). Approximately the same number of atoms of each of these
-    elements fills approximately the same amount of space. Therefore, the gases made
-    of lighter atoms are lighter.\r\n"
+    m_LineSpacing: 1.20000005
+  m_Text: "In this case, the helium balloon that you hold by a string is floating
+    in a \"pool\" of air. The helium balloon displaces an amount of air (just like
+    the empty bottle in real pool displaces an amount of water). As long as the helium
+    plus the balloon is lighter than the air it displaces, the balloon will float
+    in the air.\r\nIt turns out that helium is a lot lighter than air. The difference
+    is not as great as it is between water and air (a liter of water weighs about
+    1000 grams, while a liter of air weighs about 1 gram), but it is significant.
+    Helium weighs 0.1785 grams per liter. Nitrogen weighs 1.2506 grams per liter,
+    and since nitrogen makes up about 80 percent of the air we breathe, 1.25 grams
+    is a good approximation for the weight of a liter of air.\r\nTherefore, if you
+    were to fill a 1-liter soda bottle full of helium, the bottle would weigh about
+    1 gram less than the same bottle filled with air. That doesn't sound like much
+    -- the bottle itself weighs more than a gram, so it won't float. However, in large
+    volumes, the 1-gram-per-liter difference between air and helium can really add
+    up. This explains why blimps and balloons are generally quite large -- they have
+    to displace a lot of air to float.\n\nAlthough they are not used that much anymore,
+    hydrogen balloons were once quite popular. Hydrogen weighs just 0.08988 grams
+    per liter. However, it is highly flammable, so the tiniest spark can cause a huge
+    explosion.\r\n\nSo why are helium and hydrogen so much lighter than air?\nIt's
+    because the hydrogen and helium atoms are lighter than a nitrogen atom. They have
+    fewer electrons, protons and neutrons than nitrogen atoms, and that makes them
+    lighter (the approximate atomic weight of hydrogen is 1, helium is 4 and nitrogen
+    is 14). Approximately the same number of atoms of each of these elements fills
+    approximately the same amount of space. Therefore, the gases made of lighter atoms
+    are lighter than air.\r"
 --- !u!222 &638387687
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -963,8 +948,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: 8.82148743e-06, y: -480}
-  m_SizeDelta: {x: 421, y: 960}
+  m_AnchoredPosition: {x: 8.82148743e-06, y: -340}
+  m_SizeDelta: {x: 421, y: 680}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2119503441
 MonoBehaviour:
